@@ -1,155 +1,190 @@
 import { useEffect, useState } from 'react';
-import styles from './EMagazine.module.css';
+import './EMagazine.css';
 
-// Where to put your files so this page can find them:
-const COVER_SRC = '/images/magazine-cover.jpg';
-const PDF_SRC = '/files/magazine.pdf';
+// ============================================================
+// DUMMY DATA (replace with API fetch later)
+// ============================================================
+const DUMMY_MAGAZINES = [
+  {
+    id: 1,
+    title: 'THE HORIZON',
+    issue: 'Spring 2026',
+    coverImage: '/images/team/magzine-image.jpeg',
+    pdfUrl: '/files/The-Horizon-Spring-2026.pdf',
+    description:
+      'This spring, we celebrate the extraordinary resilience of our community. From groundbreaking research in AI ethics to the vibrant energy of our cultural festival, this issue captures the many faces of Crossroads — bold, compassionate, and relentlessly curious.',
+    topics: ['Technology', 'Education', 'Campus Life', 'Research'],
+    date: 'Spring 2026',
+  },
+  {
+    id: 2,
+    title: 'INNOVATION DIGEST',
+    issue: 'Fall 2025',
+    coverImage: '/images/team/innovation-cover.jpg',
+    pdfUrl: '/files/Innovation-Digest-Fall2025.pdf',
+    description:
+      'A deep dive into the latest breakthroughs in sustainable energy, AI-driven healthcare, and the future of work. Featuring interviews with industry leaders and faculty researchers.',
+    topics: ['Innovation', 'Sustainability', 'AI', 'Future Work'],
+    date: 'Fall 2025',
+  },
+];
 
 export default function EMagazine() {
-  const [coverExists, setCoverExists] = useState(false);
-  const [pdfExists, setPdfExists] = useState(false);
-  const [readerOpen, setReaderOpen] = useState(false);
+  const [magazines, setMagazines] = useState([]);
+  const [selectedMag, setSelectedMag] = useState(null);
+  const [coverExists, setCoverExists] = useState({});
+  const [pdfExists, setPdfExists] = useState({});
 
+  // ---------- fetch magazines ----------
   useEffect(() => {
-    let cancelled = false;
-    fetch(PDF_SRC, { method: 'HEAD' })
-      .then((res) => { if (!cancelled) setPdfExists(res.ok); })
-      .catch(() => { if (!cancelled) setPdfExists(false); });
-    return () => { cancelled = true; };
+    // TODO: Replace with actual API call
+    const data = DUMMY_MAGAZINES;
+    setMagazines(data);
+    if (data.length > 0) setSelectedMag(data[0]);
   }, []);
 
-  function openReader() {
-    if (!pdfExists) return;
-    setReaderOpen(true);
-    document.body.style.overflow = 'hidden';
-  }
+  // ---------- check images & PDFs ----------
+  useEffect(() => {
+    if (!selectedMag) return;
 
-  function closeReader() {
-    setReaderOpen(false);
-    document.body.style.overflow = '';
-  }
+    const img = new Image();
+    img.src = selectedMag.coverImage;
+    img.onload = () => setCoverExists(prev => ({ ...prev, [selectedMag.id]: true }));
+    img.onerror = () => setCoverExists(prev => ({ ...prev, [selectedMag.id]: false }));
 
+    let cancelled = false;
+    fetch(selectedMag.pdfUrl, { method: 'HEAD' })
+      .then((res) => {
+        if (!cancelled) setPdfExists(prev => ({ ...prev, [selectedMag.id]: res.ok }));
+      })
+      .catch(() => {
+        if (!cancelled) setPdfExists(prev => ({ ...prev, [selectedMag.id]: false }));
+      });
+    return () => { cancelled = true; };
+  }, [selectedMag]);
+
+  // ---------- download ----------
   function downloadPdf() {
-    if (!pdfExists) return;
+    if (!selectedMag) return;
     const a = document.createElement('a');
-    a.href = PDF_SRC;
-    a.download = 'Horizon-Campus-Edition.pdf';
+    a.href = selectedMag.pdfUrl;
+    a.download = selectedMag.pdfUrl.split('/').pop();
     a.click();
+  }
+
+  // ---------- read online (opens in new tab) ----------
+  function readOnline() {
+    if (!selectedMag) return;
+    window.open(selectedMag.pdfUrl, '_blank');
+  }
+
+  if (!selectedMag) {
+    return <div className="loading-magazines">Loading magazines...</div>;
   }
 
   return (
     <>
       {/* HERO */}
-      <section className={styles.hero}>
-        <div className={styles['blob-1']}></div>
-        <div className={styles['blob-2']}></div>
-        <div className={styles['blob-3']}></div>
-        <div className={styles['hero-inner']}>
-          <div className={styles.eyebrow}><span className={styles.icon}>📖</span> Explore</div>
-          <h1 className={styles['hero-title']}>Horizon: Campus <span className={styles.red}>Edition</span></h1>
-          <p className={styles['hero-desc']}>Our official university magazine — stories, research and campus life.</p>
+      <section className="hero">
+        <div className="hero-inner">
+          <div className="eyebrow"><span className="icon">📖</span> Explore</div>
+          <h1 className="hero-title">Horizon: Campus <span className="red">Edition</span></h1>
+          <p className="hero-desc">Our official university magazine — stories, research and campus life.</p>
         </div>
       </section>
 
-      {/* MAGAZINE */}
-      <section className={styles['mag-section']}>
-        <div className={styles['mag-inner']}>
-          <div className={`${styles['mag-layout']} reveal reveal-up`}>
-            {/* COVER — add public/images/magazine-cover.jpg */}
-            <div className={styles['mag-cover-side']}>
-              <span className={styles['cover-badge']}>E-Magazine</span>
-              <div className={styles['cover-image-wrap']}>
-                {coverExists ? (
-                  <img
-                    className={styles['cover-img']}
-                    src={COVER_SRC}
-                    alt="Magazine Cover"
-                    onClick={openReader}
-                    title="Click to read"
-                    onError={() => setCoverExists(false)}
-                  />
-                ) : (
-                  <img
-                    src={COVER_SRC}
-                    alt=""
-                    style={{ display: 'none' }}
-                    onLoad={() => setCoverExists(true)}
-                    onError={() => setCoverExists(false)}
-                  />
-                )}
-                {!coverExists && (
-                  <div className={styles['cover-placeholder']}>
-                    <div className={styles['ph-icon']}>🖼️</div>
-                    <div className={styles['ph-text']}>No cover image uploaded.<br />Add one at public/images/magazine-cover.jpg</div>
-                  </div>
-                )}
-              </div>
+      {/* MAIN LAYOUT */}
+      <section className="mag-section">
+        <div className="mag-inner">
+          <div className="mag-layout">
+            {/* -------- SIDEBAR -------- */}
+            <div className="mag-sidebar">
+              <h3 className="sidebar-title">📚 All Issues</h3>
+              <ul className="mag-list">
+                {magazines.map((mag) => (
+                  <li
+                    key={mag.id}
+                    className={`mag-list-item ${selectedMag.id === mag.id ? 'active' : ''}`}
+                    onClick={() => setSelectedMag(mag)}
+                  >
+                    <div className="mag-list-cover">
+                      {coverExists[mag.id] ? (
+                        <img src={mag.coverImage} alt={mag.title} />
+                      ) : (
+                        <div className="list-placeholder">📄</div>
+                      )}
+                    </div>
+                    <div className="mag-list-info">
+                      <div className="mag-list-title">{mag.title}</div>
+                      <div className="mag-list-issue">{mag.issue}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* INFO */}
-            <div className={styles['mag-info-side']}>
-              <div className={styles['issue-badge']}>🗓 Latest Issue — Spring 2026</div>
-              <h2 className={styles['mag-title']}>THE HORIZON</h2>
-              <p className={styles['mag-subtitle']}>Spring 2026</p>
-              <div className={styles['editorial-block']}>
-                <div className={styles['editorial-label']}>Editorial</div>
-                <p className={styles['editorial-text']}>
-                  This spring, we celebrate the extraordinary resilience of our community. From groundbreaking
-                  research in AI ethics to the vibrant energy of our cultural festival, this issue captures the many
-                  faces of Crossroads — bold, compassionate, and relentlessly curious.
-                </p>
-              </div>
-              <div className={styles['topic-pills']}>
-                <span className={styles['topic-pill']}>Technology</span>
-                <span className={styles['topic-pill']}>Education</span>
-                <span className={styles['topic-pill']}>Campus Life</span>
-                <span className={styles['topic-pill']}>Research</span>
+            {/* -------- CONTENT -------- */}
+            <div className="mag-content">
+              <div className="mag-cover-side">
+                <span className="cover-badge">E-Magazine</span>
+                <div className="cover-image-wrap">
+                  {coverExists[selectedMag.id] ? (
+                    <img
+                      className="cover-img"
+                      src={selectedMag.coverImage}
+                      alt={`${selectedMag.title} cover`}
+                      onError={() => setCoverExists(prev => ({ ...prev, [selectedMag.id]: false }))}
+                    />
+                  ) : (
+                    <div className="cover-placeholder">
+                      <div className="ph-icon">🖼️</div>
+                      <div className="ph-text">No cover image uploaded.</div>
+                    </div>
+                  )}
+                </div>
               </div>
 
-              <div className={styles['mag-actions']}>
-                <button className={styles['btn-read']} onClick={openReader} disabled={!pdfExists}>
-                  👁 Read Online →
-                </button>
-                <button className={styles['btn-download']} onClick={downloadPdf} disabled={!pdfExists}>
-                  ⬇ Download PDF
-                </button>
+              <div className="mag-info-side">
+                <div className="issue-badge">🗓 {selectedMag.date}</div>
+                <h2 className="mag-title">{selectedMag.title}</h2>
+                <p className="mag-subtitle">{selectedMag.issue}</p>
+                <div className="editorial-block">
+                  <div className="editorial-label">Editorial</div>
+                  <p className="editorial-text">{selectedMag.description}</p>
+                </div>
+                <div className="topic-pills">
+                  {selectedMag.topics.map((topic) => (
+                    <span key={topic} className="topic-pill">{topic}</span>
+                  ))}
+                </div>
+
+                {/* TWO BUTTONS: Download + Read Online */}
+                <div className="mag-actions">
+                  <button
+                    className="btn-download"
+                    onClick={downloadPdf}
+                    disabled={!pdfExists[selectedMag.id]}
+                  >
+                    ⬇ Download PDF
+                  </button>
+                  <button
+                    className="btn-read-online"
+                    onClick={readOnline}
+                    disabled={!pdfExists[selectedMag.id]}
+                  >
+                    📖 Read Online
+                  </button>
+                </div>
+                {!pdfExists[selectedMag.id] && (
+                  <p style={{ fontSize: '12px', color: '#E63946', marginTop: '10px' }}>
+                    ⚠️ PDF not found. Please upload the file.
+                  </p>
+                )}
               </div>
-              {!pdfExists && (
-                <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '10px' }}>
-                  Add your PDF at <code>public/files/magazine.pdf</code> to enable reading &amp; downloads.
-                </p>
-              )}
             </div>
           </div>
         </div>
       </section>
-
-      {/* READER MODAL */}
-      <div className={`${styles['reader-overlay']}${readerOpen ? ' ' + styles.open : ''}`}>
-        <div className={styles['reader-modal']}>
-          <div className={styles['reader-header']}>
-            <div className={styles['reader-title']}>
-              <div className={styles['mag-dot']}></div>
-              THE HORIZON — Spring 2026
-            </div>
-            <div className={styles['reader-controls']}>
-              <button className={styles['reader-btn']} onClick={downloadPdf}>⬇ Download</button>
-              <div className={styles['reader-close']} onClick={closeReader}>✕</div>
-            </div>
-          </div>
-          <div className={styles['reader-body']}>
-            {pdfExists ? (
-              <iframe src={PDF_SRC} title="Magazine PDF Reader" />
-            ) : (
-              <div className={styles['reader-empty']}>
-                <div className={styles['em-icon']}>📖</div>
-                <p>No PDF uploaded yet.</p>
-                <p style={{ fontSize: '13px', marginTop: '4px' }}>Add it at public/files/magazine.pdf</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
     </>
   );
 }

@@ -25,9 +25,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Route>
 
-        {/* Admin dashboard has its own sidebar/topbar chrome, so it lives
-            outside the public <Layout /> (no public navbar/footer). */}
-        <Route path="/admin" element={<AdminDashboard />} />
+        
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,5 @@
 import { useReveal, useDataCountCounters } from '../../hooks/useScrollEffects';
-import styles from './CampusInfo.module.css';
+import './CampusInfo.css'; // Import the CSS
 
 const STAT_HIGHLIGHTS = [
   { icon: 'fa-graduation-cap', count: '20', label: '+ Diverse Programs' },
@@ -40,29 +40,6 @@ const POST_ADP_FEES = [
 
 const FEE_COLUMNS = ['Programme', 'Cr Hrs', 'Registration', 'Admission', 'Per Cr Hr', 'Total', 'Yearly Avg'];
 
-function FeeTable({ title, icon, color, rows }) {
-  return (
-    <div className={`${styles.card} reveal reveal-up`} style={{ marginBottom: '32px' }}>
-      <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)', marginBottom: '12px' }}>
-        <i className={`fas ${icon}`} style={{ color, marginRight: '8px' }}></i> {title}
-      </h3>
-      <div className={styles['table-wrap']}>
-        <table>
-          <thead>
-            <tr>{FEE_COLUMNS.map((c) => <th key={c}>{c}</th>)}</tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <tr key={row[0]}>{row.map((cell, i) => <td key={i}>{cell}</td>)}</tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '6px' }}>* All amounts in PKR.</p>
-    </div>
-  );
-}
-
 const FEATURES = [
   'HEC Recognized Degree Programs', 'Outcome-Based Education', 'Industry-Aligned Curriculum',
   'AI & Emerging Technologies Integration', 'State-of-the-Art Smart Classrooms',
@@ -89,49 +66,72 @@ const CLUBS = [
   { icon: 'fa-chalkboard', name: 'Academic Community' },
 ];
 
+function FeeTable({ title, icon, color, rows }) {
+  return (
+    <div className="card" style={{ marginBottom: '32px' }}>
+      <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)', marginBottom: '12px' }}>
+        <i className={`fas ${icon}`} style={{ color, marginRight: '8px' }}></i> {title}
+      </h3>
+      <div className="table-wrap">
+        <table>
+          <thead>
+            <tr>{FEE_COLUMNS.map((c) => <th key={c}>{c}</th>)}</tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr key={row[0]}>{row.map((cell, i) => <td key={i}>{cell}</td>)}</tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '6px' }}>* All amounts in PKR.</p>
+    </div>
+  );
+}
+
 export default function CampusInfo() {
   useReveal();
   useDataCountCounters();
 
   return (
     <>
-      {/* HERO */}
-      <section className={styles.hero}>
-        <div className={styles['hero-inner']}>
-          <div className={styles.eyebrow}><i className="fas fa-university"></i> Campus Info</div>
-          <h1 className={styles['hero-title']}>
-            Your Gateway to <br /><span className={styles['gradient-text']}>Academic Excellence</span>
+      {/* ===== HERO ===== */}
+      <section className="hero">
+        <div className="hero-inner">
+          <div className="eyebrow"><i className="fas fa-university"></i> Campus Info</div>
+          <h1 className="hero-title">
+            Your Gateway to <br /><span className="gradient-text">Academic Excellence</span>
           </h1>
-          <p className={styles['hero-desc']}>
+          <p className="hero-desc">
             Explore our programs, fee structure, scholarships, and vibrant campus life — all the information you need
             to begin your journey at UCP Rawalpindi.
           </p>
-          <div className={styles['hero-badge']}>
+          <div className="hero-badge">
             <i className="fas fa-calendar-alt"></i> Academic Year <strong>2026</strong>
           </div>
         </div>
       </section>
 
-      {/* STAT HIGHLIGHTS */}
-      <section className={styles.section} style={{ paddingTop: '20px' }}>
-        <div className={`${styles['grid-6']} ${styles['stagger-grid']}`}>
+      {/* ===== STAT HIGHLIGHTS ===== */}
+      <section className="section" style={{ paddingTop: '20px' }}>
+        <div className="grid-6 stagger-grid">
           {STAT_HIGHLIGHTS.map((s, idx) => (
-            <div key={s.label} className={`${styles['stat-highlight']} reveal reveal-up ${styles['float-3d']}`} style={{ '--i': idx }}>
-              <span className={styles.icon}><i className={`fas ${s.icon}`}></i></span>
-              <span className={styles.number} data-count={s.count}>0</span>
-              <span className={styles.label}>{s.label}</span>
+            <div key={s.label} className="stat-highlight" style={{ '--i': idx }}>
+              <span className="icon"><i className={`fas ${s.icon}`}></i></span>
+              <span className="number" data-count={s.count}>0</span>
+              <span className="label">{s.label}</span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CONSTITUENT COLLEGE + ADMISSION POLICY */}
-      <section className={styles.section}>
-        <div className={styles['grid-2']}>
-          <div className={`${styles.card} reveal reveal-up`}>
-            <span className={styles['icon-large']}><i className="fas fa-landmark"></i></span>
+      {/* ===== CONSTITUENT COLLEGE + ADMISSION POLICY ===== */}
+      <section className="section">
+        <div className="grid-2">
+          <div className="card">
+            <span className="icon-large"><i className="fas fa-landmark"></i></span>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--dark)', marginBottom: '16px' }}>
-              A Constituent College of <span className={styles.highlight}>UCP</span>
+              A Constituent College of <span className="highlight">UCP</span>
             </h2>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '0.95rem' }}>
               Constituent Colleges are maintained and administrated by the university itself. They provide students
@@ -140,8 +140,8 @@ export default function CampusInfo() {
               century is unprecedented. Since 2002, UCP has opened a world of infinite opportunities.
             </p>
           </div>
-          <div className={`${styles.card} reveal reveal-up`} style={{ transitionDelay: '0.1s' }}>
-            <span className={styles['icon-large']}><i className="fas fa-clipboard-list"></i></span>
+          <div className="card" style={{ transitionDelay: '0.1s' }}>
+            <span className="icon-large"><i className="fas fa-clipboard-list"></i></span>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--dark)', marginBottom: '12px' }}>Admission Policy</h3>
             <p><strong>Minimum Eligibility:</strong> 45% marks in Intermediate / A-Levels or equivalent.</p>
             <p style={{ marginTop: '12px' }}><strong>Admission Criteria:</strong></p>
@@ -164,150 +164,150 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* DEGREE PROGRAMS */}
-      <section className={`${styles.section} ${styles['accent-bg']}`}>
-        <div className={`${styles['section-label']} reveal reveal-up`}>
-          <div className={styles.eyebrow}><i className="fas fa-book-open"></i> Programs</div>
-          <h2>Explore Our <span className={styles.highlight}>Degree Programs</span></h2>
+      {/* ===== DEGREE PROGRAMS ===== */}
+      <section className="section accent-bg">
+        <div className="section-label">
+          <div className="eyebrow"><i className="fas fa-book-open"></i> Programs</div>
+          <h2>Explore Our <span className="highlight">Degree Programs</span></h2>
         </div>
-        <div className={styles['grid-2']} style={{ marginTop: '20px' }}>
-          <div className={`${styles.card} reveal reveal-up`}>
-            <span className={styles['icon-large']}><i className="fas fa-user-graduate"></i></span>
+        <div className="grid-2" style={{ marginTop: '20px' }}>
+          <div className="card">
+            <span className="icon-large"><i className="fas fa-user-graduate"></i></span>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)', marginBottom: '16px' }}>
               Associate Degree Programs <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--text-muted)' }}>(2 Years)</span>
             </h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
               {['ADP Computer Science', 'ADP Artificial Intelligence', 'ADP Data Sciences', 'ADP Bio-Technology', 'ADP English', 'ADP Business Administration', 'ADP Business Analytics', 'ADP Accounting & Finance', 'ADP Psychology'].map((p) => (
-                <span key={p} className={styles.pill}>{p}</span>
+                <span key={p} className="pill">{p}</span>
               ))}
             </div>
           </div>
-          <div className={`${styles.card} reveal reveal-up`} style={{ transitionDelay: '0.1s' }}>
-            <span className={styles['icon-large']}><i className="fas fa-university"></i></span>
+          <div className="card" style={{ transitionDelay: '0.1s' }}>
+            <span className="icon-large"><i className="fas fa-university"></i></span>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)', marginBottom: '16px' }}>
               Bachelors Programs <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--text-muted)' }}>(4 Years)</span>
             </h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
               {['BSCS', 'BBA', 'BS Accounting & Finance', 'BS Business Analytics', 'BS Psychology', 'BS Bio-Technology', 'BS English'].map((p) => (
-                <span key={p} className={styles.pill}>{p}</span>
+                <span key={p} className="pill">{p}</span>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* FEE STRUCTURE */}
-      <section className={styles.section}>
-        <div className={`${styles['section-label']} reveal reveal-up`}>
-          <div className={styles.eyebrow}><i className="fas fa-coins"></i> Fee Structure</div>
-          <h2>2024-2026 <span className={styles.highlight}>Tuition Fees</span></h2>
+      {/* ===== FEE STRUCTURE ===== */}
+      <section className="section">
+        <div className="section-label">
+          <div className="eyebrow"><i className="fas fa-coins"></i> Fee Structure</div>
+          <h2>2024-2026 <span className="highlight">Tuition Fees</span></h2>
         </div>
         <FeeTable title="BS Programs" icon="fa-graduation-cap" color="var(--blue-accent)" rows={BS_FEES} />
         <FeeTable title="ADP Programs" icon="fa-layer-group" color="var(--purple)" rows={ADP_FEES} />
         <FeeTable title="Post-ADP Programs" icon="fa-arrow-right" color="var(--gold)" rows={POST_ADP_FEES} />
       </section>
 
-      {/* SCHOLARSHIPS */}
-      <section className={`${styles.section} ${styles['accent-bg']}`}>
-        <div className={`${styles['section-label']} reveal reveal-up`}>
-          <div className={styles.eyebrow}><i className="fas fa-hand-holding-usd"></i> Financial Support</div>
-          <h2>Scholarships &amp; <span className={styles.highlight}>Concessions</span></h2>
+      {/* ===== SCHOLARSHIPS ===== */}
+      <section className="section accent-bg">
+        <div className="section-label">
+          <div className="eyebrow"><i className="fas fa-hand-holding-usd"></i> Financial Support</div>
+          <h2>Scholarships &amp; <span className="highlight">Concessions</span></h2>
         </div>
-        <div className={styles['grid-2']}>
-          <div className={`${styles.card} reveal reveal-up`}>
+        <div className="grid-2">
+          <div className="card">
             <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)', marginBottom: '16px' }}>
               <i className="fas fa-graduation-cap" style={{ color: 'var(--blue-accent)' }}></i> BS Programs
             </h3>
-            <div className={styles['scholar-card']} style={{ borderLeftColor: 'var(--blue-accent)' }}>
-              <h4>Merit Based Scholarship <span className={styles.badge} style={{ background: 'var(--blue-accent)' }}>At Admission</span></h4>
-              <p>CGPA/Percentage ≥ 80% → <span className={styles.discount}>50%</span> scholarship</p>
+            <div className="scholar-card" style={{ borderLeftColor: 'var(--blue-accent)' }}>
+              <h4>Merit Based Scholarship <span className="badge" style={{ background: 'var(--blue-accent)' }}>At Admission</span></h4>
+              <p>CGPA/Percentage ≥ 80% → <span className="discount">50%</span> scholarship</p>
             </div>
-            <div className={styles['scholar-card']} style={{ borderLeftColor: 'var(--purple)', marginTop: '12px' }}>
+            <div className="scholar-card" style={{ borderLeftColor: 'var(--purple)', marginTop: '12px' }}>
               <h4>BS Acc &amp; Finance, BS Psychology, BS English</h4>
-              <p>Percentage ≥ 75% → <span className={styles.discount}>50%</span> scholarship</p>
+              <p>Percentage ≥ 75% → <span className="discount">50%</span> scholarship</p>
             </div>
-            <div className={styles['scholar-card']} style={{ borderLeftColor: 'var(--gold)', marginTop: '12px' }}>
+            <div className="scholar-card" style={{ borderLeftColor: 'var(--gold)', marginTop: '12px' }}>
               <h4>Old Student &amp; Kinship</h4>
-              <p>At admission → <span className={styles.discount}>50%</span> discount</p>
+              <p>At admission → <span className="discount">50%</span> discount</p>
             </div>
           </div>
-          <div className={`${styles.card} reveal reveal-up`} style={{ transitionDelay: '0.1s' }}>
+          <div className="card" style={{ transitionDelay: '0.1s' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)', marginBottom: '16px' }}>
               <i className="fas fa-layer-group" style={{ color: 'var(--purple)' }}></i> ADP Programs
             </h3>
-            <div className={styles['scholar-card']} style={{ borderLeftColor: 'var(--blue-accent)' }}>
-              <h4>Merit Based Scholarship <span className={styles.badge} style={{ background: 'var(--blue-accent)' }}>At Admission</span></h4>
-              <p>Percentage ≥ 75% → <span className={styles.discount}>50%</span> scholarship</p>
+            <div className="scholar-card" style={{ borderLeftColor: 'var(--blue-accent)' }}>
+              <h4>Merit Based Scholarship <span className="badge" style={{ background: 'var(--blue-accent)' }}>At Admission</span></h4>
+              <p>Percentage ≥ 75% → <span className="discount">50%</span> scholarship</p>
             </div>
-            <div className={styles['scholar-card']} style={{ borderLeftColor: 'var(--purple)', marginTop: '12px' }}>
+            <div className="scholar-card" style={{ borderLeftColor: 'var(--purple)', marginTop: '12px' }}>
               <h4>Old Student</h4>
-              <p>≥ 65% marks → <span className={styles.discount}>50%</span> ; &lt; 65% → <span className={styles.discount}>25%</span></p>
+              <p>≥ 65% marks → <span className="discount">50%</span> ; &lt; 65% → <span className="discount">25%</span></p>
             </div>
-            <div className={styles['scholar-card']} style={{ borderLeftColor: 'var(--gold)', marginTop: '12px' }}>
+            <div className="scholar-card" style={{ borderLeftColor: 'var(--gold)', marginTop: '12px' }}>
               <h4>Kinship / Govt / Armed Forces / Teacher's Child</h4>
-              <p>At admission → <span className={styles.discount}>25%</span> discount</p>
+              <p>At admission → <span className="discount">25%</span> discount</p>
             </div>
           </div>
         </div>
-        <div className={`${styles.card} reveal reveal-up`} style={{ marginTop: '24px', textAlign: 'center', border: '2px solid rgba(37,99,235,0.15)' }}>
+        <div className="card" style={{ marginTop: '24px', textAlign: 'center', border: '2px solid rgba(37,99,235,0.15)' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)' }}>
             <i className="fas fa-star" style={{ color: 'var(--gold)' }}></i> CGPA Based Performance Scholarship
           </h3>
           <p style={{ color: 'var(--text-muted)', marginTop: '8px' }}>For all programs — based on CGPA:</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap', marginTop: '16px' }}>
-            <div><strong style={{ color: 'var(--dark)', fontSize: '1.2rem' }}>≥ 3.5</strong> <span style={{ color: 'var(--text-muted)' }}>→</span> <span className={styles.discount} style={{ fontSize: '1.2rem' }}>50%</span></div>
-            <div><strong style={{ color: 'var(--dark)', fontSize: '1.2rem' }}>3.25 – 3.49</strong> <span style={{ color: 'var(--text-muted)' }}>→</span> <span className={styles.discount} style={{ fontSize: '1.2rem' }}>25%</span></div>
+            <div><strong style={{ color: 'var(--dark)', fontSize: '1.2rem' }}>≥ 3.5</strong> <span style={{ color: 'var(--text-muted)' }}>→</span> <span className="discount" style={{ fontSize: '1.2rem' }}>50%</span></div>
+            <div><strong style={{ color: 'var(--dark)', fontSize: '1.2rem' }}>3.25 – 3.49</strong> <span style={{ color: 'var(--text-muted)' }}>→</span> <span className="discount" style={{ fontSize: '1.2rem' }}>25%</span></div>
           </div>
         </div>
       </section>
 
-      {/* KEY FEATURES */}
-      <section className={styles.section}>
-        <div className={`${styles['section-label']} reveal reveal-up`}>
-          <div className={styles.eyebrow}><i className="fas fa-star"></i> Why UCP</div>
-          <h2>Key <span className={styles.highlight}>Features</span></h2>
+      {/* ===== KEY FEATURES ===== */}
+      <section className="section">
+        <div className="section-label">
+          <div className="eyebrow"><i className="fas fa-star"></i> Why UCP</div>
+          <h2>Key <span className="highlight">Features</span></h2>
         </div>
-        <div className={`${styles.card} reveal reveal-up`}>
-          <ul className={styles['feature-list']}>
+        <div className="card">
+          <ul className="feature-list">
             {FEATURES.map((f) => <li key={f}><i className="fas fa-check-circle"></i> {f}</li>)}
           </ul>
         </div>
       </section>
 
-      {/* CLUBS & SOCIETIES TEASER */}
-      <section className={`${styles.section} ${styles['accent-bg']}`}>
-        <div className={`${styles['section-label']} reveal reveal-up`}>
-          <div className={styles.eyebrow}><i className="fas fa-users"></i> Community</div>
-          <h2>Clubs &amp; <span className={styles.highlight}>Societies</span></h2>
+      {/* ===== CLUBS & SOCIETIES ===== */}
+      <section className="section accent-bg">
+        <div className="section-label">
+          <div className="eyebrow"><i className="fas fa-users"></i> Community</div>
+          <h2>Clubs &amp; <span className="highlight">Societies</span></h2>
         </div>
-        <div className={`${styles.card} reveal reveal-up`} style={{ textAlign: 'center' }}>
+        <div className="card" style={{ textAlign: 'center' }}>
           <p style={{ color: 'var(--text-muted)', marginBottom: '24px', fontSize: '1rem' }}>
             Engage, network, and grow with our vibrant student communities.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px' }}>
             {CLUBS.map((c) => (
-              <span key={c.name} className={styles['club-tag']}><i className={`fas ${c.icon}`}></i> {c.name}</span>
+              <span key={c.name} className="club-tag"><i className={`fas ${c.icon}`}></i> {c.name}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CAMPUSES */}
-      <section className={styles.section}>
-        <div className={`${styles['section-label']} reveal reveal-up`}>
-          <div className={styles.eyebrow}><i className="fas fa-map-pin"></i> Visit Us</div>
-          <h2>Our <span className={styles.highlight}>Campuses</span></h2>
+      {/* ===== CAMPUSES ===== */}
+      <section className="section">
+        <div className="section-label">
+          <div className="eyebrow"><i className="fas fa-map-pin"></i> Visit Us</div>
+          <h2>Our <span className="highlight">Campuses</span></h2>
         </div>
-        <div className={styles['grid-2']}>
-          <div className={`${styles['campus-card']} reveal reveal-up`}>
+        <div className="grid-2">
+          <div className="campus-card">
             <h3><i className="fas fa-location-dot" style={{ color: 'var(--red-accent)' }}></i> Campus 1</h3>
             <p>Punjab College D-464, 6th Road, Satellite Town, Rawalpindi</p>
-            <p className={styles.phone}><i className="fas fa-phone"></i> 051-4421672 &nbsp;|&nbsp; 051-4421459</p>
+            <p className="phone"><i className="fas fa-phone"></i> 051-4421672 &nbsp;|&nbsp; 051-4421459</p>
           </div>
-          <div className={`${styles['campus-card']} reveal reveal-up`} style={{ transitionDelay: '0.1s' }}>
+          <div className="campus-card" style={{ transitionDelay: '0.1s' }}>
             <h3><i className="fas fa-location-dot" style={{ color: 'var(--red-accent)' }}></i> Campus 2</h3>
             <p>Punjab College, Attock Oil Refinery Road, Rawalpindi</p>
-            <p className={styles.phone}><i className="fas fa-phone"></i> 051-5450033-44</p>
+            <p className="phone"><i className="fas fa-phone"></i> 051-5450033-44</p>
           </div>
         </div>
       </section>

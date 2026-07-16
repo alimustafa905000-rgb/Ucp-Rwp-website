@@ -50,6 +50,7 @@
   width: auto;
   display: block;
   border-radius: 4px;
+  
 }
 
 .nav-divider {
@@ -74,6 +75,7 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  background: rgba(237, 246, 255, 0.92);
 }
 
 .nav-links a {

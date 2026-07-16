@@ -40,9 +40,9 @@ export default function Contact() {
   return (
     <div className={styles['page-wrapper']}>
       <section className={styles.hero}>
-        <div className={styles['blob-1']}></div>
+        {/* <div className={styles['blob-1']}></div>
         <div className={styles['blob-2']}></div>
-        <div className={styles['blob-3']}></div>
+        <div className={styles['blob-3']}></div> */}
         <div className={styles['hero-inner']}>
           <div className={styles.eyebrow}>
             <span className={styles.icon}>✉️</span> GET IN TOUCH

@@ -7,12 +7,20 @@ export default function Footer() {
     <footer>
       <div className="footer-inner">
         <div className="footer-brand">
-          {/* Add your logo file at: public/images/logo1.jpeg */}
-          <img
-            src="/images/team/logo-1.png"
-            alt="UCP Logo"
-            onError={(e) => { e.target.style.background = 'rgba(255,255,255,0.1)'; }}
-          />
+          {/* Two logos with divider */}
+          <div className="footer-logos">
+            <img
+              src="/images/team/logo-1.png"
+              alt="UCP Logo"
+              onError={(e) => { e.target.style.background = 'rgba(255,255,255,0.1)'; }}
+            />
+            <div className="footer-logo-divider" />
+            <img
+              src="/images/team/logo-2.jpeg"
+              alt="Punjab College Logo"
+              onError={(e) => { e.target.style.background = 'rgba(255,255,255,0.1)'; }}
+            />
+          </div>
           <div className="brand-name">Punjab College</div>
           <div className="brand-sub">UCP Campus Rawalpindi</div>
           <p>
@@ -64,7 +72,6 @@ export default function Footer() {
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
           <a href="#">Cookies</a>
-          
         </div>
       </div>
     </footer>

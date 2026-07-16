@@ -79,7 +79,7 @@ export default function Home() {
             <div className={styles['hero-img-card']}>
               {/* Add campus building photo at: public/images/campus-building.jpg */}
               <img
-                src="/images/campus-building.jpg"
+                src="/images/team/campus-image.jfif"
                 alt="UCP Rawalpindi Campus Building"
                 onError={(e) => {
                   e.target.style.background = 'linear-gradient(135deg,#EDF6FF,#C7D9F5)';
@@ -108,7 +108,7 @@ export default function Home() {
           <div className={`${styles['about-img-wrap']} reveal-left`}>
             {/* Add campus photo at: public/images/campus-wide.jpg */}
             <img
-              src="/images/campus-wide.jpg"
+              src="/images/team/campus-front.jfif"
               alt="UCP Campus"
               onError={(e) => {
                 e.target.style.background = 'linear-gradient(135deg,#F5FBFF,#D0E7FF)';
@@ -172,7 +172,7 @@ export default function Home() {
                 <div className={styles['ad-icon']}>🎬</div>
                 <h3>Upload Your Video Advertisement</h3>
                 <p>Click anywhere on this card to select a video file.<br />Supported formats: MP4, WebM, MOV, AVI</p>
-                <span className={styles['btn-outline']} style={{ pointerEvents: 'none' }}>🎥 Choose Video File</span>
+                {/* <span className={styles['btn-outline']} style={{ pointerEvents: 'none' }}>🎥 Choose Video File</span> */}
               </div>
             )}
 
