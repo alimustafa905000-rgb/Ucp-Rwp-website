@@ -1,5 +1,5 @@
 import { useReveal } from '../../hooks/useScrollEffects';
-import './NoticeBoard.css'; // Import the global CSS (not a module)
+import './NoticeBoard.css';
 
 const ANNOUNCEMENTS = [
   {
@@ -43,11 +43,10 @@ const EVENTS = [
 ];
 
 export default function NoticeBoard() {
-  useReveal();
+  useReveal(); // triggers scroll animations
 
   return (
     <>
-      {/* HERO */}
       <section className="hero">
         <div className="blob-1"></div>
         <div className="blob-2"></div>
@@ -60,12 +59,15 @@ export default function NoticeBoard() {
       </section>
 
       <div className="main-content">
-        {/* ANNOUNCEMENTS */}
         <div className="announcements-col">
           <h2 className="section-title reveal reveal-up">Latest Announcements</h2>
           <div className="announcement-list">
             {ANNOUNCEMENTS.map((a, idx) => (
-              <div key={a.title} className="announcement-card reveal reveal-up" style={{ transitionDelay: `${idx * 0.08}s` }}>
+              <div
+                key={a.title}
+                className="announcement-card reveal reveal-up"
+                style={{ transitionDelay: `${idx * 0.08}s` }}
+              >
                 <div className="date-badge">
                   <div className="day">{a.day}</div>
                   <div className="month">{a.month}</div>
@@ -80,7 +82,6 @@ export default function NoticeBoard() {
           </div>
         </div>
 
-        {/* SIDEBAR */}
         <div className="sidebar">
           <div className="events-card reveal reveal-right">
             <div className="events-header">

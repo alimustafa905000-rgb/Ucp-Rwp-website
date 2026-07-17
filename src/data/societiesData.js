@@ -1,132 +1,110 @@
-// Societies & team data — edit this file to add/update clubs and members.
-// Team member "image" paths point to public/images/team/<society-id>/<n>.jpg
-// Drop matching image files there, or leave missing and initials will show instead.
 export const societiesData = [
   {
     "id": "devforge",
-    "name": "Devforge Digital Club",
-    "icon": "fa-code",
-    "tagline": "\"Code. Create. Innovate.\"",
+    "name": "DevForge Society",
+    "tagline": "\"Code, Create, Innovate.\"",
     "tag": "Tech Club",
-    "description": "Devforge is the premier tech society at UCP Rawalpindi. We bring together passionate developers, designers, and innovators to work on real-world projects, hackathons, and cutting-edge technologies. Members gain hands-on experience in web development, app development, AI, and more. Our mission is to build a community where technology meets creativity, and every member can transform their ideas into reality.",
+    "logo": "/images/team/dev-logo.jpeg", 
+    "description": "The DevForge Society is a technology-driven community that empowers students to explore software development, web technologies, and emerging trends in the tech industry. The society organizes coding competitions, workshops, hackathons, and collaborative projects to enhance students' technical and problem-solving skills.",
+    "mission": "To inspire innovation and equip students with practical skills in software development, programming, and modern technologies.",
+    "objectives": [
+      "Promote programming and software development skills.",
+      "Organize coding competitions and hackathons.",
+      "Encourage teamwork and innovation.",
+      "Provide hands-on experience through projects.",
+      "Introduce students to emerging technologies."
+    ],
+    "activities": [
+      "Web and mobile development workshops.",
+      "Coding competitions and hackathons.",
+      "Programming bootcamps and seminars.",
+      "Open-source and collaborative projects.",
+      "Guest sessions with industry professionals."
+    ],
+    "vision": "To build a community of creative developers and future technology leaders.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Code, Create, Innovate.\"",
     "team": [
       {
-        "name": "Syra Mazhar",
+        "name": "Saira Mazhar",
         "designation": "Society Head",
-        "skills": [
-          "Project Mgmt"
-        ],
+        "skills": ["Lecturer in Computer Science","Academic Reasearcher","Enterprise Software Engineering/Alghorithms Expert","python/java/c#/C++/VB.net"],
         "linkedin": "#",
         "github": "#",
-        "image": "/images/team/devforge/1.jpg"
+        "image": "/images/team/mam-img.jpeg"
       },
       {
-        "name": "Sana Khan",
-        "designation": "Vice President",
-        "skills": [
-          "UI/UX",
-          "Figma",
-          "Design Thinking"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/devforge/2.jpg"
-      },
-      {
-        "name": "Usman Ali",
-        "designation": "Technical Lead",
-        "skills": [
-          "Python",
-          "AI/ML",
-          "Django"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/devforge/3.jpg"
-      },
-      {
-        "name": "Fatima Noor",
-        "designation": "Design Lead",
-        "skills": [
-          "Adobe XD",
-          "Illustrator",
-          "Branding"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/devforge/4.jpg"
-      },
-      {
-        "name": "Hassan Shah",
+        "name": "Syed Shahnoor",
         "designation": "Project Manager",
-        "skills": [
-          "Agile",
-          "Scrum",
-          "JIRA"
-        ],
+        "skills": ["Team Managment","Team Lead"],
         "linkedin": "#",
         "github": "#",
-        "image": "/images/team/devforge/5.jpg"
+        "image": "/images/team/shahnoor.jpeg"
       },
       {
-        "name": "Ayesha Malik",
-        "designation": "Full Stack Developer",
-        "skills": [
-          "React",
-          "Node.js",
-          "MongoDB"
-        ],
+        "name": "Javeria raza",
+        "designation": " Backend Tech Lead",
+        "skills": ["AI Software Engineer", "Full Stack System", "AI Product Builder","Entrepreneurial Technologist"],
+        "linkedin": "https://www.linkedin.com/in/itsjavairiaraza/",
+        "github": "https://github.com/itsjavairiaraza",
+        "image": "/images/team/j-img.jpeg"
+      },
+      {
+        "name": "Mirza Rehan Ahmed",
+        "designation": "Tech Lead",
+        "skills": ["PROXMOX", "n8n", "Robotics","Embedded System","c++","HomeAssistant","IOT"],
+        "linkedin": "https://www.linkedin.com/in/mirzarehanahmad",
+        "github": "https://github.com/RehanAM006",
+        "image": "/images/team/rehan-img.jpeg"
+      },
+      {
+        "name": "Ali Mustafa",
+        "designation": "Frontend Engineer",
+        "skills": ["Html", "Css", "Javascript","Tailwindcss","Bootstrap","React","Python","c++","Sql","MangoseDb",],
         "linkedin": "#",
         "github": "#",
-        "image": "/images/team/devforge/6.jpg"
+        "image": "/images/team/ali-imge.jpeg"
       },
       {
-        "name": "Bilal Ahmed",
+        "name": "Laraib Rashid",
+        "designation": "E-Maagazine Editor",
+        "skills": ["figa","adope","canva"],
+        
+        "image": "/images/team/laraib.jpeg"
+      },
+      {
+        "name": "Abdullah",
+        "designation": "E-Magazine Editor",
+        "skills": ["Development", "Seo", "Content Writer","Article Writer","Designer"],
+        "linkedin": "#",
+        "github": "#",
+        "image": "/images/team/abdullah-img.jpeg"
+      },
+      {
+        "name": "Arsal Ali",
         "designation": "UI/UX Designer",
-        "skills": [
-          "Figma",
-          "Sketch",
-          "Prototyping"
-        ],
+        "skills": [ "Prototyping", "Figma","Wireframing","System Designing","Canva","Layout Designing"],
         "linkedin": "#",
         "github": "#",
-        "image": "/images/team/devforge/7.jpg"
+        "image": "/images/team/arsal-image.jpeg"
       },
       {
-        "name": "Zara Tariq",
-        "designation": "AI/ML Engineer",
-        "skills": [
-          "Python",
-          "TensorFlow",
-          "Data Science"
-        ],
+        "name": "Hiba Asad",
+        "designation": "Content Writer",
+        "skills": ["Technical Writer", "Graphic Designing", "Creative Content and Reasearch"],
         "linkedin": "#",
         "github": "#",
-        "image": "/images/team/devforge/8.jpg"
+        "image": "/images/team/h-img.jpeg"
       },
       {
-        "name": "Omar Farooq",
-        "designation": "DevOps Engineer",
-        "skills": [
-          "AWS",
-          "Docker",
-          "Kubernetes"
-        ],
+        "name": "Laiba Babar",
+        "designation": "Content Writer",
+        "skills": ["Social Media", "Content", "Events"],
         "linkedin": "#",
         "github": "#",
-        "image": "/images/team/devforge/9.jpg"
-      },
-      {
-        "name": "Mahnoor Sheikh",
-        "designation": "Community Manager",
-        "skills": [
-          "Social Media",
-          "Content",
-          "Events"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/devforge/10.jpg"
+        "image": "/images/team/liaba-img.jpeg"
       }
     ]
   },
@@ -134,1430 +112,320 @@ export const societiesData = [
     "id": "alumni",
     "name": "Alumni Association Club",
     "icon": "fa-handshake",
-    "tagline": "\"Bridging generations, building futures.\"",
+    "tagline": "Alumni Network",
     "tag": "Networking",
-    "description": "The Alumni Association Club connects current students with the vast network of UCP graduates. Through mentorship programs, guest lectures, and networking events, members gain valuable career insights and build lasting professional relationships. We believe that the strength of our alumni network is the foundation of our university's success, and we are committed to fostering connections that last a lifetime.",
-    "team": [
-      {
-        "name": "Dr. Asif Mahmood",
-        "designation": "President",
-        "skills": [
-          "Leadership",
-          "Public Speaking",
-          "Networking"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/1.jpg"
-      },
-      {
-        "name": "Rabia Tariq",
-        "designation": "Vice President",
-        "skills": [
-          "Event Planning",
-          "Communication",
-          "Mentoring"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/2.jpg"
-      },
-      {
-        "name": "Kamran Javed",
-        "designation": "Alumni Relations Lead",
-        "skills": [
-          "Relationship Mgmt",
-          "CRM",
-          "Outreach"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/3.jpg"
-      },
-      {
-        "name": "Hira Siddiqui",
-        "designation": "Career Counselor",
-        "skills": [
-          "Career Advising",
-          "Resume Review",
-          "Interview Prep"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/4.jpg"
-      },
-      {
-        "name": "Naveed Anjum",
-        "designation": "Events Coordinator",
-        "skills": [
-          "Event Mgmt",
-          "Logistics",
-          "Publicity"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/5.jpg"
-      },
-      {
-        "name": "Sadia Riaz",
-        "designation": "Communications Lead",
-        "skills": [
-          "Content Writing",
-          "Social Media",
-          "PR"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/6.jpg"
-      },
-      {
-        "name": "Tariq Mehmood",
-        "designation": "Mentorship Coordinator",
-        "skills": [
-          "Mentoring",
-          "Training",
-          "Development"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/7.jpg"
-      },
-      {
-        "name": "Nida Ashraf",
-        "designation": "Data Analyst",
-        "skills": [
-          "Excel",
-          "SQL",
-          "Data Visualization"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/8.jpg"
-      },
-      {
-        "name": "Faisal Ali",
-        "designation": "Finance Lead",
-        "skills": [
-          "Budgeting",
-          "Accounting",
-          "Reporting"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/9.jpg"
-      },
-      {
-        "name": "Iman Saeed",
-        "designation": "Student Liaison",
-        "skills": [
-          "Student Engagement",
-          "Feedback",
-          "Support"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/alumni/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "The Alumni Association Club connects graduates with current students to build strong professional and academic relationships. The club organizes networking events, mentorship programs, career counseling sessions, and alumni meetups to strengthen the university community.",
+    "mission": "To maintain lifelong connections between alumni and the university while supporting students through guidance, mentorship, and career opportunities.",
+    "objectives": [
+      "Strengthen relationships between alumni and students.",
+      "Organize networking and reunion events.",
+      "Provide career guidance and mentorship.",
+      "Promote collaboration and knowledge sharing.",
+      "Support university initiatives and community projects."
+    ],
+    "activities": [
+      "Alumni meetups and reunions.",
+      "Career counseling sessions.",
+      "Guest lectures by successful alumni.",
+      "Professional networking events.",
+      "Mentorship programs for students.",
+      "Community service projects."
+    ],
+    "vision": "To create a vibrant and connected alumni network that contributes to the personal and professional growth of students and graduates.",
+    "contact": {
+      "email": "alumni@university.edu",
+      "phone": "+92 300 1234567",
+      "office": "Student Affairs Department"
+    },
+    "motto": "\"Connecting Generations, Inspiring Success.\""
   },
   {
     "id": "dramatic",
     "name": "Dramatic Club",
-    "icon": "fa-theater-masks",
-    "tagline": "\"Where stories come alive.\"",
+    "tagline": "\"Bringing Stories to Life Through Performance.\"",
     "tag": "Performing Arts",
-    "description": "The Dramatic Club is the heart of performing arts at UCP Rawalpindi. From theater productions to improv nights and street performances, we provide a platform for students to express their creativity, build confidence, and showcase their talent. Our club is a family of artists who believe in the power of storytelling to inspire, entertain, and bring people together.",
-    "team": [
-      {
-        "name": "Salman Haider",
-        "designation": "President",
-        "skills": [
-          "Acting",
-          "Directing",
-          "Scriptwriting"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/1.jpg"
-      },
-      {
-        "name": "Mehwish Aslam",
-        "designation": "Vice President",
-        "skills": [
-          "Acting",
-          "Voice Modulation",
-          "Improvisation"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/2.jpg"
-      },
-      {
-        "name": "Rizwan Bhatti",
-        "designation": "Director",
-        "skills": [
-          "Direction",
-          "Blocking",
-          "Stage Mgmt"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/3.jpg"
-      },
-      {
-        "name": "Amina Qureshi",
-        "designation": "Playwright",
-        "skills": [
-          "Scriptwriting",
-          "Storytelling",
-          "Character Development"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/4.jpg"
-      },
-      {
-        "name": "Zain Ahmed",
-        "designation": "Stage Manager",
-        "skills": [
-          "Stage Mgmt",
-          "Lighting",
-          "Sound"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/5.jpg"
-      },
-      {
-        "name": "Saba Hassan",
-        "designation": "Costume Designer",
-        "skills": [
-          "Costume Design",
-          "Fashion",
-          "Styling"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/6.jpg"
-      },
-      {
-        "name": "Hamza Malik",
-        "designation": "Lighting Designer",
-        "skills": [
-          "Lighting Design",
-          "Tech",
-          "Operations"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/7.jpg"
-      },
-      {
-        "name": "Areeba Khan",
-        "designation": "Publicity Lead",
-        "skills": [
-          "Marketing",
-          "Social Media",
-          "PR"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/8.jpg"
-      },
-      {
-        "name": "Usman Chaudhry",
-        "designation": "Actor & Trainer",
-        "skills": [
-          "Acting",
-          "Coaching",
-          "Workshops"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/9.jpg"
-      },
-      {
-        "name": "Nimra Shehzad",
-        "designation": "Production Assistant",
-        "skills": [
-          "Organization",
-          "Logistics",
-          "Support"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/dramatic/10.jpg"
-      }
-    ]
+    "logo": "/images/team/d-club.jpeg", // ✅ Added logo path
+    "description": "The Dramatic Club provides students with a platform to showcase their creativity, acting skills, and passion for performing arts. The club organizes theatrical performances, stage plays, cultural events, and workshops to promote artistic expression and teamwork.",
+    "mission": "To encourage creativity and self-expression through drama, theater, and performing arts while fostering confidence and collaboration among students.",
+    "objectives": [
+      "Promote talent in acting and stage performance.",
+      "Organize plays, skits, and cultural events.",
+      "Develop communication and presentation skills.",
+      "Encourage teamwork and leadership.",
+      "Provide opportunities for artistic growth."
+    ],
+    "activities": [
+      "Stage dramas and theatrical performances.",
+      "Acting and scriptwriting workshops.",
+      "Cultural festivals and competitions.",
+      "Talent shows and auditions.",
+      "Interactive sessions with artists."
+    ],
+    "vision": "To build a vibrant community of creative individuals who inspire and entertain through the art of drama.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Bringing Stories to Life Through Performance.\""
   },
   {
     "id": "blood-donors",
-    "name": "Blood Donors Society",
+    "name": "Blood Donation Society",
     "icon": "fa-heartbeat",
-    "tagline": "\"Give blood, save lives.\"",
+    "tagline": "\"Donate Blood, Save Lives.\"",
     "tag": "Community Service",
-    "description": "The Blood Donors Society is dedicated to saving lives through regular blood donation drives and awareness campaigns. We collaborate with hospitals and health organizations to ensure a steady supply of blood for those in need. Our society is driven by the belief that every drop counts, and we work tirelessly to create a culture of giving and compassion on campus.",
-    "team": [
-      {
-        "name": "Dr. Faisal Khan",
-        "designation": "President",
-        "skills": [
-          "Medical Knowledge",
-          "Leadership",
-          "Public Health"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/1.jpg"
-      },
-      {
-        "name": "Hina Tariq",
-        "designation": "Vice President",
-        "skills": [
-          "Event Planning",
-          "Communication",
-          "Awareness"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/2.jpg"
-      },
-      {
-        "name": "Ali Raza",
-        "designation": "Medical Coordinator",
-        "skills": [
-          "Medical Screening",
-          "Patient Care",
-          "First Aid"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/3.jpg"
-      },
-      {
-        "name": "Sania Imran",
-        "designation": "Awareness Lead",
-        "skills": [
-          "Health Education",
-          "Public Speaking",
-          "Outreach"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/4.jpg"
-      },
-      {
-        "name": "Osama Javed",
-        "designation": "Volunteer Coordinator",
-        "skills": [
-          "Volunteer Mgmt",
-          "Training",
-          "Scheduling"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/5.jpg"
-      },
-      {
-        "name": "Rabia Anwar",
-        "designation": "Hospital Liaison",
-        "skills": [
-          "Partnerships",
-          "Communication",
-          "Logistics"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/6.jpg"
-      },
-      {
-        "name": "Zeeshan Ali",
-        "designation": "Data Manager",
-        "skills": [
-          "Data Entry",
-          "Excel",
-          "Reporting"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/7.jpg"
-      },
-      {
-        "name": "Mahnoor Hashmi",
-        "designation": "Social Media Lead",
-        "skills": [
-          "Content Creation",
-          "Social Media",
-          "Campaigns"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/8.jpg"
-      },
-      {
-        "name": "Rizwana Malik",
-        "designation": "Fundraising Lead",
-        "skills": [
-          "Fundraising",
-          "Grant Writing",
-          "Sponsorships"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/9.jpg"
-      },
-      {
-        "name": "Imran Shah",
-        "designation": "Event Support",
-        "skills": [
-          "Logistics",
-          "Volunteer Support",
-          "First Aid"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/blood-donors/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "The Blood Donation Society is dedicated to promoting awareness about the importance of blood donation and encouraging students to contribute to humanitarian causes. The society organizes blood donation drives, awareness campaigns, and community service activities to support those in need.",
+    "mission": "To save lives by fostering a culture of voluntary blood donation and social responsibility among students.",
+    "objectives": [
+      "Raise awareness about blood donation.",
+      "Organize blood donation camps and drives.",
+      "Encourage community service and volunteerism.",
+      "Support hospitals and patients in need.",
+      "Promote health and humanitarian values."
+    ],
+    "activities": [
+      "Blood donation camps.",
+      "Awareness seminars and workshops.",
+      "Volunteer and fundraising activities.",
+      "Collaboration with hospitals and healthcare organizations.",
+      "Community outreach programs."
+    ],
+    "vision": "To create a compassionate and socially responsible community committed to saving lives through blood donation.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Donate Blood, Save Lives.\""
   },
   {
     "id": "sports-hiking",
-    "name": "Sports & Hiking Club",
+    "name": "Sports and Hiking Club",
     "icon": "fa-hiking",
-    "tagline": "\"Adventure awaits, step outside.\"",
+    "tagline": "\"Explore, Compete, and Conquer.\"",
     "tag": "Sports",
-    "description": "The Sports & Hiking Club promotes physical fitness, outdoor adventure, and team spirit. From hiking expeditions to inter-university sports tournaments, we encourage students to stay active and explore the great outdoors. Our club is for anyone who loves the thrill of adventure, the joy of competition, and the camaraderie of a team.",
-    "team": [
-      {
-        "name": "Kamran Ali",
-        "designation": "President",
-        "skills": [
-          "Leadership",
-          "Sports Mgmt",
-          "Fitness"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/1.jpg"
-      },
-      {
-        "name": "Nadia Khan",
-        "designation": "Vice President",
-        "skills": [
-          "Outdoor Adventure",
-          "Team Building",
-          "Event Planning"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/2.jpg"
-      },
-      {
-        "name": "Asad Mehmood",
-        "designation": "Head Coach",
-        "skills": [
-          "Fitness Training",
-          "Sports Coaching",
-          "Athletics"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/3.jpg"
-      },
-      {
-        "name": "Sara Ahmed",
-        "designation": "Adventure Lead",
-        "skills": [
-          "Hiking",
-          "Camping",
-          "Survival Skills"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/4.jpg"
-      },
-      {
-        "name": "Usman Bhatti",
-        "designation": "Sports Coordinator",
-        "skills": [
-          "Tournament Org",
-          "Refereeing",
-          "Scheduling"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/5.jpg"
-      },
-      {
-        "name": "Hira Anwar",
-        "designation": "Fitness Trainer",
-        "skills": [
-          "Fitness",
-          "Yoga",
-          "Nutrition"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/6.jpg"
-      },
-      {
-        "name": "Salman Tariq",
-        "designation": "Equipment Manager",
-        "skills": [
-          "Inventory Mgmt",
-          "Maintenance",
-          "Logistics"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/7.jpg"
-      },
-      {
-        "name": "Amina Rauf",
-        "designation": "Publicity Lead",
-        "skills": [
-          "Marketing",
-          "Social Media",
-          "Design"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/8.jpg"
-      },
-      {
-        "name": "Fahad Malik",
-        "designation": "Trip Coordinator",
-        "skills": [
-          "Trip Planning",
-          "Navigation",
-          "Safety"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/9.jpg"
-      },
-      {
-        "name": "Zara Usman",
-        "designation": "Community Lead",
-        "skills": [
-          "Member Engagement",
-          "Outreach",
-          "Events"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/sports-hiking/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "The Sports and Hiking Club promotes physical fitness, teamwork, and adventure among students. The club organizes sports tournaments, hiking trips, fitness activities, and outdoor events to encourage a healthy and active lifestyle.",
+    "mission": "To inspire students to maintain physical fitness and explore nature through sports and outdoor activities.",
+    "objectives": [
+      "Promote sportsmanship and teamwork.",
+      "Organize sports competitions and hiking trips.",
+      "Encourage healthy and active lifestyles.",
+      "Develop leadership and communication skills.",
+      "Foster a spirit of adventure."
+    ],
+    "activities": [
+      "Cricket, football, and badminton tournaments.",
+      "Hiking and trekking trips.",
+      "Fitness and training sessions.",
+      "Outdoor adventure activities.",
+      "Inter-university sports competitions."
+    ],
+    "vision": "To create a community of energetic and adventurous students who value fitness and teamwork.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Explore, Compete, and Conquer.\""
   },
   {
     "id": "gaming",
     "name": "Gaming Club",
     "icon": "fa-gamepad",
-    "tagline": "\"Level up your passion.\"",
+    "tagline": "\"Play, Compete, and Win.\"",
     "tag": "Gaming & Esports",
-    "description": "The Gaming Club is a hub for gamers of all levels. We host LAN parties, esports tournaments, and casual gaming sessions. Whether you're into competitive gaming or just looking to make friends, this is the place for you. Our club is a community where gamers can connect, compete, and celebrate their shared passion for gaming.",
-    "team": [
-      {
-        "name": "Arslan Raza",
-        "designation": "President",
-        "skills": [
-          "Gaming",
-          "Esports Mgmt",
-          "Strategy"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/1.jpg"
-      },
-      {
-        "name": "Maha Ali",
-        "designation": "Vice President",
-        "skills": [
-          "Community Building",
-          "Event Planning",
-          "Gaming"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/2.jpg"
-      },
-      {
-        "name": "Hamza Siddiqui",
-        "designation": "Esports Manager",
-        "skills": [
-          "Esports",
-          "Coaching",
-          "Analysis"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/3.jpg"
-      },
-      {
-        "name": "Rida Khan",
-        "designation": "Streaming Lead",
-        "skills": [
-          "Streaming",
-          "Content Creation",
-          "OBS"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/4.jpg"
-      },
-      {
-        "name": "Usman Qureshi",
-        "designation": "Tournament Director",
-        "skills": [
-          "Tournament Org",
-          "Rules",
-          "Bracketing"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/5.jpg"
-      },
-      {
-        "name": "Aleena Farooq",
-        "designation": "Community Manager",
-        "skills": [
-          "Community Mgmt",
-          "Discord",
-          "Engagement"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/6.jpg"
-      },
-      {
-        "name": "Zain Haider",
-        "designation": "Game Developer",
-        "skills": [
-          "Unity",
-          "C#",
-          "Game Design"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/7.jpg"
-      },
-      {
-        "name": "Saba Malik",
-        "designation": "Design Lead",
-        "skills": [
-          "Graphic Design",
-          "UI/UX",
-          "Branding"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/8.jpg"
-      },
-      {
-        "name": "Omar Hassan",
-        "designation": "Pro Player",
-        "skills": [
-          "Competitive Gaming",
-          "Strategy",
-          "Team Play"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/9.jpg"
-      },
-      {
-        "name": "Fatima Sheikh",
-        "designation": "Events Coordinator",
-        "skills": [
-          "Event Planning",
-          "Logistics",
-          "Sponsorships"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/gaming/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "The Gaming Club provides students with a platform to enjoy competitive and recreational gaming. The club organizes gaming tournaments, esports competitions, and interactive events that encourage teamwork, strategy, and creativity.",
+    "mission": "To create an inclusive gaming community where students can develop strategic thinking and teamwork skills.",
+    "objectives": [
+      "Promote esports and competitive gaming.",
+      "Organize gaming tournaments and events.",
+      "Encourage teamwork and problem-solving.",
+      "Provide opportunities for social interaction.",
+      "Support innovation in gaming and technology."
+    ],
+    "activities": [
+      "Esports tournaments.",
+      "Gaming competitions and challenges.",
+      "Multiplayer gaming sessions.",
+      "Workshops on game development.",
+      "Inter-university gaming events."
+    ],
+    "vision": "To establish a vibrant gaming community that inspires creativity and healthy competition.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Play, Compete, and Win.\""
   },
   {
     "id": "csr",
     "name": "CSR Club",
     "icon": "fa-hand-holding-heart",
-    "tagline": "\"Impact that matters.\"",
+    "tagline": "\"Together for a Better Community.\"",
     "tag": "Social Impact",
-    "description": "The CSR Club (Corporate Social Responsibility) focuses on creating positive social impact through community service, sustainability initiatives, and awareness campaigns. We believe in giving back and making a difference. Our members work together to address social issues, promote environmental sustainability, and build a better world, one project at a time.",
-    "team": [
-      {
-        "name": "Hassan Ahmed",
-        "designation": "President",
-        "skills": [
-          "Leadership",
-          "Social Impact",
-          "Project Mgmt"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/1.jpg"
-      },
-      {
-        "name": "Sana Tariq",
-        "designation": "Vice President",
-        "skills": [
-          "Community Outreach",
-          "Advocacy",
-          "Communication"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/2.jpg"
-      },
-      {
-        "name": "Bilal Mahmood",
-        "designation": "Sustainability Lead",
-        "skills": [
-          "Sustainability",
-          "Environment",
-          "Green Initiatives"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/3.jpg"
-      },
-      {
-        "name": "Ayesha Riaz",
-        "designation": "Community Coordinator",
-        "skills": [
-          "Community Service",
-          "Volunteer Mgmt",
-          "Partnerships"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/4.jpg"
-      },
-      {
-        "name": "Usman Javed",
-        "designation": "Awareness Lead",
-        "skills": [
-          "Campaigns",
-          "Public Speaking",
-          "Content"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/5.jpg"
-      },
-      {
-        "name": "Zara Ali",
-        "designation": "Project Manager",
-        "skills": [
-          "Project Mgmt",
-          "Planning",
-          "Execution"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/6.jpg"
-      },
-      {
-        "name": "Farhan Shah",
-        "designation": "Fundraising Lead",
-        "skills": [
-          "Fundraising",
-          "Sponsorships",
-          "Grant Writing"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/7.jpg"
-      },
-      {
-        "name": "Nimra Hassan",
-        "designation": "Social Media Lead",
-        "skills": [
-          "Social Media",
-          "Content",
-          "Design"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/8.jpg"
-      },
-      {
-        "name": "Hamid Raza",
-        "designation": "Research Lead",
-        "skills": [
-          "Research",
-          "Data Analysis",
-          "Reporting"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/9.jpg"
-      },
-      {
-        "name": "Mahnoor Aslam",
-        "designation": "Events Coordinator",
-        "skills": [
-          "Event Planning",
-          "Logistics",
-          "Engagement"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/csr/10.jpg"
-      }
-    ]
+    "logo": "/images/team/csr.png", // ✅ Added logo path (optional – you mentioned CSR)
+    "description": "The CSR (Corporate Social Responsibility) Club aims to develop social responsibility and community engagement among students. The club organizes welfare projects, awareness campaigns, and volunteer activities to create a positive impact on society.",
+    "mission": "To empower students to contribute to society through volunteer work, community service, and social initiatives.",
+    "objectives": [
+      "Promote social responsibility and leadership.",
+      "Organize welfare and community service projects.",
+      "Encourage volunteerism among students.",
+      "Raise awareness about social issues.",
+      "Support sustainable development initiatives."
+    ],
+    "activities": [
+      "Charity and fundraising campaigns.",
+      "Community service projects.",
+      "Awareness seminars and workshops.",
+      "Environmental and social initiatives.",
+      "Volunteer programs."
+    ],
+    "vision": "To build socially responsible leaders who actively contribute to the betterment of society.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Together for a Better Community.\""
   },
   {
     "id": "robotics",
-    "name": "Robotics & Automation Society",
+    "name": "Robotics and Automation Society",
     "icon": "fa-robot",
-    "tagline": "\"Building the future, one robot at a time.\"",
+    "tagline": "\"Innovating the Future Through Technology.\"",
     "tag": "Tech & Engineering",
-    "description": "The Robotics & Automation Society is for students passionate about building robots, automation systems, and exploring the future of technology. We work on hands-on projects, participate in robotics competitions, and host workshops. Our society is a playground for innovators who want to push the boundaries of what's possible with technology.",
-    "team": [
-      {
-        "name": "Dr. Usman Khalid",
-        "designation": "President",
-        "skills": [
-          "Robotics",
-          "AI",
-          "Engineering"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/1.jpg"
-      },
-      {
-        "name": "Zainab Ali",
-        "designation": "Vice President",
-        "skills": [
-          "Automation",
-          "Project Mgmt",
-          "Research"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/2.jpg"
-      },
-      {
-        "name": "Hamza Iqbal",
-        "designation": "Robotics Lead",
-        "skills": [
-          "ROS",
-          "C++",
-          "Embedded Systems"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/3.jpg"
-      },
-      {
-        "name": "Sara Khan",
-        "designation": "AI Specialist",
-        "skills": [
-          "Python",
-          "Machine Learning",
-          "Computer Vision"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/4.jpg"
-      },
-      {
-        "name": "Rizwan Tariq",
-        "designation": "Mechanical Engineer",
-        "skills": [
-          "CAD",
-          "SolidWorks",
-          "Mechanical Design"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/5.jpg"
-      },
-      {
-        "name": "Aisha Noor",
-        "designation": "Electronics Lead",
-        "skills": [
-          "Arduino",
-          "PCB Design",
-          "Sensors"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/6.jpg"
-      },
-      {
-        "name": "Usman Sheikh",
-        "designation": "Software Developer",
-        "skills": [
-          "Python",
-          "Java",
-          "Algorithms"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/7.jpg"
-      },
-      {
-        "name": "Nida Riaz",
-        "designation": "Workshop Coordinator",
-        "skills": [
-          "Training",
-          "Workshops",
-          "Education"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/8.jpg"
-      },
-      {
-        "name": "Fahad Ali",
-        "designation": "Competition Lead",
-        "skills": [
-          "RoboCup",
-          "Competition Strategy",
-          "Team Mgmt"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/9.jpg"
-      },
-      {
-        "name": "Mahnoor Siddiqui",
-        "designation": "Communications Lead",
-        "skills": [
-          "PR",
-          "Social Media",
-          "Content"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/robotics/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "The Robotics and Automation Society provides students with opportunities to explore robotics, automation, and emerging technologies. The society organizes workshops, competitions, and hands-on projects to enhance technical skills and innovation.",
+    "mission": "To inspire students to develop innovative solutions through robotics, automation, and modern technology.",
+    "objectives": [
+      "Promote knowledge of robotics and automation.",
+      "Organize technical workshops and competitions.",
+      "Encourage research and innovation.",
+      "Develop problem-solving and teamwork skills.",
+      "Provide practical learning opportunities."
+    ],
+    "activities": [
+      "Robotics competitions and exhibitions.",
+      "Programming and automation workshops.",
+      "Technical seminars and guest lectures.",
+      "Hands-on projects and training sessions.",
+      "Inter-university events."
+    ],
+    "vision": "To create a community of innovative thinkers and future engineers.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Innovating the Future Through Technology.\""
   },
   {
     "id": "literary",
     "name": "Literary Society",
-    "icon": "fa-book",
-    "tagline": "\"Words that inspire, stories that connect.\"",
+    "tagline": "\"Words That Inspire Minds.\"",
     "tag": "Literature & Arts",
-    "description": "The Literary Society celebrates the written word through poetry readings, book clubs, creative writing workshops, and literary competitions. We provide a space for students to explore their love for literature and express themselves. Our society is a sanctuary for dreamers, writers, and thinkers who believe in the power of words to change the world.",
-    "team": [
-      {
-        "name": "Sara Tariq",
-        "designation": "President",
-        "skills": [
-          "Creative Writing",
-          "Poetry",
-          "Leadership"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/1.jpg"
-      },
-      {
-        "name": "Ali Raza",
-        "designation": "Vice President",
-        "skills": [
-          "Literature",
-          "Editing",
-          "Public Speaking"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/2.jpg"
-      },
-      {
-        "name": "Ayesha Farooq",
-        "designation": "Poetry Lead",
-        "skills": [
-          "Poetry",
-          "Spoken Word",
-          "Performance"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/3.jpg"
-      },
-      {
-        "name": "Usman Ahmed",
-        "designation": "Book Club Lead",
-        "skills": [
-          "Reading",
-          "Discussion",
-          "Curating"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/4.jpg"
-      },
-      {
-        "name": "Hira Noor",
-        "designation": "Creative Writing Coach",
-        "skills": [
-          "Writing",
-          "Editing",
-          "Storytelling"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/5.jpg"
-      },
-      {
-        "name": "Zain Malik",
-        "designation": "Events Coordinator",
-        "skills": [
-          "Event Planning",
-          "Poetry Slams",
-          "Workshops"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/6.jpg"
-      },
-      {
-        "name": "Mahnoor Asif",
-        "designation": "Publicity Lead",
-        "skills": [
-          "Marketing",
-          "Design",
-          "Social Media"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/7.jpg"
-      },
-      {
-        "name": "Hamza Qureshi",
-        "designation": "Literary Critic",
-        "skills": [
-          "Analytical Writing",
-          "Review",
-          "Critique"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/8.jpg"
-      },
-      {
-        "name": "Nimra Hassan",
-        "designation": "Archivist",
-        "skills": [
-          "Organization",
-          "Documentation",
-          "Archiving"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/9.jpg"
-      },
-      {
-        "name": "Rayan Sheikh",
-        "designation": "Community Lead",
-        "skills": [
-          "Engagement",
-          "Outreach",
-          "Inclusion"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/literary/10.jpg"
-      }
-    ]
+    "logo": "/images/team/l-club.jpeg", // ✅ Added logo path
+    "description": "The Literary Society encourages students to express their ideas and creativity through literature, writing, and public speaking. The society organizes debates, poetry sessions, and literary events to promote intellectual growth.",
+    "mission": "To foster creativity, critical thinking, and communication skills through literary activities.",
+    "objectives": [
+      "Promote reading and writing culture.",
+      "Organize debates and poetry competitions.",
+      "Encourage public speaking and creative expression.",
+      "Develop communication skills.",
+      "Support literary talent among students."
+    ],
+    "activities": [
+      "Poetry and storytelling sessions.",
+      "Debate competitions.",
+      "Essay and article writing contests.",
+      "Book discussions and literary workshops.",
+      "Public speaking events."
+    ],
+    "vision": "To build a vibrant community of writers, speakers, and thinkers.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Words That Inspire Minds.\""
   },
   {
     "id": "scientific",
     "name": "Scientific Society",
     "icon": "fa-flask",
-    "tagline": "\"Curiosity knows no bounds.\"",
+    "tagline": "\"Exploring Science, Inspiring Innovation.\"",
     "tag": "Science & Research",
-    "description": "The Scientific Society is dedicated to promoting scientific inquiry, research, and innovation. We organize science fairs, guest lectures, and hands-on experiments to inspire the next generation of scientists and researchers. Our society is a hub for curious minds who want to explore the wonders of science and contribute to the advancement of knowledge.",
-    "team": [
-      {
-        "name": "Dr. Ayesha Khan",
-        "designation": "President",
-        "skills": [
-          "Research",
-          "Science Education",
-          "Leadership"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/1.jpg"
-      },
-      {
-        "name": "Usman Tariq",
-        "designation": "Vice President",
-        "skills": [
-          "Lab Mgmt",
-          "Experimentation",
-          "Communication"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/2.jpg"
-      },
-      {
-        "name": "Sana Malik",
-        "designation": "Research Lead",
-        "skills": [
-          "Data Analysis",
-          "Scientific Writing",
-          "Statistics"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/3.jpg"
-      },
-      {
-        "name": "Bilal Ahmed",
-        "designation": "Lab Coordinator",
-        "skills": [
-          "Lab Safety",
-          "Equipment Mgmt",
-          "Chemistry"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/4.jpg"
-      },
-      {
-        "name": "Fatima Noor",
-        "designation": "Science Fair Lead",
-        "skills": [
-          "Event Planning",
-          "Projects",
-          "Judging"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/5.jpg"
-      },
-      {
-        "name": "Hamza Ali",
-        "designation": "Physics Specialist",
-        "skills": [
-          "Physics",
-          "Electronics",
-          "Experiments"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/6.jpg"
-      },
-      {
-        "name": "Zara Hassan",
-        "designation": "Biology Lead",
-        "skills": [
-          "Biology",
-          "Microscopy",
-          "Research"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/7.jpg"
-      },
-      {
-        "name": "Ahmed Riaz",
-        "designation": "Chemistry Expert",
-        "skills": [
-          "Chemistry",
-          "Lab Work",
-          "Analysis"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/8.jpg"
-      },
-      {
-        "name": "Mahnoor Shah",
-        "designation": "Outreach Coordinator",
-        "skills": [
-          "Public Engagement",
-          "Science Communication",
-          "Workshops"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/9.jpg"
-      },
-      {
-        "name": "Rizwan Ali",
-        "designation": "Tech Support",
-        "skills": [
-          "IT Support",
-          "Data Mgmt",
-          "Scientific Computing"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/scientific/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "The Scientific Society promotes scientific knowledge, research, and innovation among students. The society organizes seminars, workshops, and exhibitions to encourage curiosity and critical thinking.",
+    "mission": "To inspire students to explore scientific concepts and contribute to research and innovation.",
+    "objectives": [
+      "Promote scientific awareness and learning.",
+      "Organize research and science-related events.",
+      "Encourage innovation and experimentation.",
+      "Develop analytical and critical-thinking skills.",
+      "Foster collaboration among students."
+    ],
+    "activities": [
+      "Science exhibitions and competitions.",
+      "Research seminars and workshops.",
+      "Laboratory visits and demonstrations.",
+      "Guest lectures by experts.",
+      "Scientific awareness campaigns."
+    ],
+    "vision": "To create a culture of scientific excellence and innovation.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Exploring Science, Inspiring Innovation.\""
   },
   {
     "id": "research-world",
     "name": "UCP Research World",
     "icon": "fa-globe",
-    "tagline": "\"Research that shapes the world.\"",
+    "tagline": "\"Research Today, Innovate Tomorrow.\"",
     "tag": "Research",
-    "description": "UCP Research World is a platform for students to engage in interdisciplinary research, collaborate on academic projects, and present their findings. We foster a culture of curiosity, critical thinking, and academic excellence. Our members are driven by the desire to solve real-world problems and make meaningful contributions to their fields of study.",
-    "team": [
-      {
-        "name": "Dr. Hassan Raza",
-        "designation": "President",
-        "skills": [
-          "Research",
-          "Interdisciplinary",
-          "Leadership"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/1.jpg"
-      },
-      {
-        "name": "Amina Tariq",
-        "designation": "Vice President",
-        "skills": [
-          "Academic Writing",
-          "Collaboration",
-          "Innovation"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/2.jpg"
-      },
-      {
-        "name": "Usman Khalid",
-        "designation": "Research Coordinator",
-        "skills": [
-          "Project Mgmt",
-          "Methodology",
-          "Analysis"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/3.jpg"
-      },
-      {
-        "name": "Sara Ahmed",
-        "designation": "Data Analyst",
-        "skills": [
-          "SPSS",
-          "Excel",
-          "Data Visualization"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/4.jpg"
-      },
-      {
-        "name": "Ali Raza",
-        "designation": "Publication Lead",
-        "skills": [
-          "Academic Writing",
-          "Editing",
-          "Publishing"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/5.jpg"
-      },
-      {
-        "name": "Hina Malik",
-        "designation": "Event Coordinator",
-        "skills": [
-          "Conferences",
-          "Seminars",
-          "Workshops"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/6.jpg"
-      },
-      {
-        "name": "Zain Tariq",
-        "designation": "Research Assistant",
-        "skills": [
-          "Literature Review",
-          "Data Entry",
-          "Support"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/7.jpg"
-      },
-      {
-        "name": "Mahnoor Ali",
-        "designation": "Communications Lead",
-        "skills": [
-          "PR",
-          "Social Media",
-          "Content"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/8.jpg"
-      },
-      {
-        "name": "Farhan Javed",
-        "designation": "IT Support",
-        "skills": [
-          "Tech Support",
-          "Data Mgmt",
-          "Web"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/9.jpg"
-      },
-      {
-        "name": "Ayesha Hassan",
-        "designation": "Grant Writer",
-        "skills": [
-          "Grant Writing",
-          "Proposals",
-          "Fundraising"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/research-world/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "UCP Research World is dedicated to promoting research, innovation, and academic excellence among students. The society provides opportunities for students to participate in research projects, conferences, and scholarly activities.",
+    "mission": "To encourage a strong research culture and support students in their academic and professional growth.",
+    "objectives": [
+      "Promote research and innovation.",
+      "Organize conferences and research seminars.",
+      "Encourage students to publish research work.",
+      "Develop analytical and investigative skills.",
+      "Foster collaboration between students and faculty."
+    ],
+    "activities": [
+      "Research workshops and seminars.",
+      "Academic conferences.",
+      "Research paper presentations.",
+      "Training sessions on research methods.",
+      "Collaborative projects."
+    ],
+    "vision": "To become a leading platform for research and academic development.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Research Today, Innovate Tomorrow.\""
   },
   {
     "id": "academic",
     "name": "Academic Community",
-    "icon": "fa-chalkboard",
-    "tagline": "\"Learn. Lead. Inspire.\"",
+    "icon": "fa-graduation-cap", // ✅ Fixed – was incorrectly set to an image path
+    "tagline": "\"Learning, Growing, Succeeding.\"",
     "tag": "Academics",
-    "description": "The Academic Community is a student-led initiative focused on academic excellence, peer tutoring, and knowledge sharing. We organize study groups, academic competitions, and workshops to help students excel in their studies. Our community is built on the belief that learning is a collaborative journey, and we are committed to supporting each other every step of the way.",
-    "team": [
-      {
-        "name": "Ahmed Khan",
-        "designation": "President",
-        "skills": [
-          "Academics",
-          "Tutoring",
-          "Leadership"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/1.jpg"
-      },
-      {
-        "name": "Sana Tariq",
-        "designation": "Vice President",
-        "skills": [
-          "Education",
-          "Mentoring",
-          "Organization"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/2.jpg"
-      },
-      {
-        "name": "Usman Ali",
-        "designation": "Tutoring Lead",
-        "skills": [
-          "Teaching",
-          "Math",
-          "Science"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/3.jpg"
-      },
-      {
-        "name": "Ayesha Noor",
-        "designation": "Study Group Coordinator",
-        "skills": [
-          "Group Mgmt",
-          "Scheduling",
-          "Communication"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/4.jpg"
-      },
-      {
-        "name": "Bilal Ahmed",
-        "designation": "Workshop Facilitator",
-        "skills": [
-          "Workshops",
-          "Training",
-          "Skill Dev"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/5.jpg"
-      },
-      {
-        "name": "Zara Hassan",
-        "designation": "Academic Advisor",
-        "skills": [
-          "Advising",
-          "Career Guidance",
-          "Student Support"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/6.jpg"
-      },
-      {
-        "name": "Hamza Qureshi",
-        "designation": "Curriculum Lead",
-        "skills": [
-          "Curriculum Design",
-          "Planning",
-          "Assessment"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/7.jpg"
-      },
-      {
-        "name": "Mahnoor Malik",
-        "designation": "Events Coordinator",
-        "skills": [
-          "Academic Events",
-          "Competitions",
-          "Conferences"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/8.jpg"
-      },
-      {
-        "name": "Rayan Shah",
-        "designation": "Peer Mentor",
-        "skills": [
-          "Mentoring",
-          "Student Support",
-          "Communication"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/9.jpg"
-      },
-      {
-        "name": "Nida Aslam",
-        "designation": "Communications Lead",
-        "skills": [
-          "PR",
-          "Social Media",
-          "Content"
-        ],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/academic/10.jpg"
-      }
-    ]
+    "logo": null,
+    "description": "The Academic Community aims to support students in their educational journey by promoting academic excellence, collaboration, and lifelong learning. The society organizes educational events, mentoring programs, and skill-development activities.",
+    "mission": "To create an environment that encourages learning, collaboration, and academic achievement.",
+    "objectives": [
+      "Promote academic excellence.",
+      "Organize educational workshops and seminars.",
+      "Encourage peer learning and mentoring.",
+      "Support students in skill development.",
+      "Foster intellectual growth and collaboration."
+    ],
+    "activities": [
+      "Study groups and mentoring sessions.",
+      "Academic seminars and workshops.",
+      "Career counseling programs.",
+      "Skill-development activities.",
+      "Interdepartmental competitions."
+    ],
+    "vision": "To build a strong academic community committed to knowledge and excellence.",
+    "contact": {
+      "phone": "+92 300 1234567"
+    },
+    "motto": "\"Learning, Growing, Succeeding.\""
   }
 ];

@@ -1,10 +1,6 @@
-// hooks/useScrollEffects.js
-
 import { useEffect, useState } from 'react';
 
-/**
- * Tracks scroll progress, navbar state, and back-to-top visibility.
- */
+// ===== 1️⃣ SCROLL EFFECTS =====
 export function useScrollEffects() {
   const [progress, setProgress] = useState(0);
   const [scrolled, setScrolled] = useState(false);
@@ -27,16 +23,15 @@ export function useScrollEffects() {
   return { progress, scrolled, showBackToTop };
 }
 
-/**
- * Reveal animations – triggers .visible class on elements with:
- * .reveal, .reveal-left, .reveal-right, .reveal-up
- * (Used with CSS transitions)
- */
+// ===== 2️⃣ REVEAL ANIMATIONS (fixed) =====
 export function useReveal(deps = []) {
   useEffect(() => {
     const els = document.querySelectorAll(
       '.reveal, .reveal-left, .reveal-right, .reveal-up'
     );
+
+    if (els.length === 0) return;
+
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -46,18 +41,29 @@ export function useReveal(deps = []) {
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      {
+        threshold: 0.05,
+        rootMargin: '200px 0px 200px 0px', // triggers well before & after
+      }
     );
+
     els.forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // Safety fallback – reveal any still-hidden elements after 1.5s
+    const timer = setTimeout(() => {
+      document.querySelectorAll(
+        '.reveal:not(.visible), .reveal-left:not(.visible), .reveal-right:not(.visible), .reveal-up:not(.visible)'
+      ).forEach(el => el.classList.add('visible'));
+    }, 1500);
+
+    return () => {
+      obs.disconnect();
+      clearTimeout(timer);
+    };
   }, deps);
 }
 
-/**
- * Legacy counter hook – animates .count elements with data-target.
- * If you're using useDataCountCounters, you don't need this.
- */
+// ===== 3️⃣ COUNTER (legacy) =====
 export function useCounters(deps = []) {
   useEffect(() => {
     function animateCount(el) {
@@ -86,22 +92,16 @@ export function useCounters(deps = []) {
     );
     counters.forEach((c) => obs.observe(c));
     return () => obs.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 }
 
-/**
- * ✅ FIXED: Animates ANY element with a `data-count` attribute.
- * Works with CSS modules because it doesn't rely on class names.
- * Supports numbers with +, #, or plain integers.
- */
+// ===== 4️⃣ DATA-COUNT COUNTER (more robust) =====
 export function useDataCountCounters(deps = []) {
   useEffect(() => {
     function animateCounter(element) {
       const targetText = element.dataset.count;
       if (!targetText) return;
 
-      // Parse suffixes and clean number
       const hasPlus = targetText.includes('+');
       const hasHash = targetText.includes('#');
       const suffix = targetText.replace(/^[#0-9]+/, '').replace('+', '');
@@ -109,7 +109,7 @@ export function useDataCountCounters(deps = []) {
       if (isNaN(cleanTarget) || cleanTarget === 0) return;
 
       let current = 0;
-      const increment = Math.ceil(cleanTarget / 50); // step size
+      const increment = Math.ceil(cleanTarget / 50);
 
       const timer = setInterval(() => {
         current += increment;
@@ -117,20 +117,15 @@ export function useDataCountCounters(deps = []) {
           current = cleanTarget;
           clearInterval(timer);
         }
-
-        // Build display string
         let display = String(current);
         if (suffix) display += suffix;
         if (hasPlus && !suffix) display += '+';
         if (hasHash) display = '#' + display;
-
         element.textContent = display;
       }, 25);
     }
 
-    // 🔥 Selector: any element with data-count, not just .stat-num
     const counters = document.querySelectorAll('[data-count]');
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -142,10 +137,7 @@ export function useDataCountCounters(deps = []) {
       },
       { threshold: 0.3 }
     );
-
     counters.forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 }
