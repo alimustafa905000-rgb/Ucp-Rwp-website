@@ -70,7 +70,7 @@ export const societiesData = [
       {
         "name": "Laraib Rashid",
         "designation": "E-Maagazine Editor",
-        "skills": ["figa","adope","canva"],
+        "skills": ["Development", "Seo", "Content Writer","Article Writer","Designer"],
         
         "image": "/images/team/laraib.jpeg"
       },
