@@ -1,28 +1,41 @@
-// src/admin/components/AdminShell.jsx
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
-import "../styles/glass.css";
+import { AnimatePresence, motion } from "framer-motion";
+
+import "../styles/premiumGlass.css";
 
 export default function AdminShell() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   return (
-    <div className="admin-bg text-slate-900">
-      {/* Outer frame like the screenshot */}
-      <div className="admin-frame mx-auto my-4 md:my-6 max-w-7xl min-h-[92vh]">
-        <div className="flex">
-          <Sidebar open={open} onClose={() => setOpen(false)} />
+    <div className="pgd-bg text-white">
+      <div className="pgd-stars" />
 
-          {/* Right side content */}
-          <div className="min-w-0 flex-1 p-3 md:p-4">
-            <Topbar onMenu={() => setOpen(true)} />
-            <main className="mt-4">
+      <div className="pgd-blob left-[-140px] top-[-160px]" style={{ background: "rgba(124,58,237,.9)" }} />
+      <div className="pgd-blob right-[-180px] top-[60px]" style={{ background: "rgba(6,182,212,.8)", animationDelay: "1.3s" }} />
+      <div className="pgd-blob left-[25%] bottom-[-220px]" style={{ background: "rgba(56,189,248,.65)", animationDelay: "2.4s" }} />
+
+      <Sidebar open={open} onClose={() => setOpen(false)} />
+
+      <div className="relative md:pl-72">
+        <Topbar onMenu={() => setOpen(true)} />
+
+        <main className="mx-auto max-w-7xl p-4 md:p-6">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+            >
               <Outlet />
-            </main>
-          </div>
-        </div>
+            </motion.div>
+          </AnimatePresence>
+        </main>
       </div>
     </div>
   );
