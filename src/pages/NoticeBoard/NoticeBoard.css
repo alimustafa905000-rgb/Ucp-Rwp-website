@@ -1,7 +1,3 @@
-/* ===== NOTICE BOARD STYLES – ENHANCED ===== */
-/* Make sure :root variables are defined in your global CSS */
-
-/* ---------- HERO ---------- */
 .hero {
   padding-top: 130px;
   padding-bottom: 60px;
@@ -10,16 +6,15 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.05) 0%, transparent 60%),
-    radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
+  background: #ffffff; /* <-- changed to plain white */
 }
 
-/* Animated floating blobs (already in your JSX – we style them) */
+/* Animated floating blobs – hidden (opacity: 0) */
 .blob-1, .blob-2, .blob-3 {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.3;
+  opacity: 0; /* <-- hidden */
   z-index: 0;
   animation: floatBlob 8s ease-in-out infinite alternate;
 }
@@ -456,8 +451,6 @@
 }
 
 /* ---------- RESPONSIVE ENHANCEMENTS ---------- */
-/* Already responsive, but we adjust some values */
-
 @media (max-width: 1024px) {
   .main-content {
     grid-template-columns: 1fr 300px;
