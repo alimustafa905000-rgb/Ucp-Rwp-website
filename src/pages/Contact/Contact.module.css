@@ -389,10 +389,14 @@
   }
 
   .hero {
-    padding: 48px 20px 40px;
+    padding: 48px 20px 32px; /* reduced bottom padding from 40px → 32px */
   }
   .hero h1 {
     font-size: clamp(32px, 5vw, 44px);
+  }
+
+  .contact-body {
+    padding: 0 20px 40px; /* reduced bottom padding from 80px → 40px */
   }
 
   .blob-1 {
@@ -430,7 +434,7 @@
   }
 
   .hero {
-    padding: 36px 16px 32px;
+    padding: 36px 16px 28px; /* further reduced on mobile */
   }
   .hero h1 {
     font-size: clamp(28px, 7vw, 36px);
@@ -448,7 +452,6 @@
     margin-bottom: 16px;
   }
 
-  /* shrink blobs on mobile */
   .blob-1 {
     width: 200px;
     height: 200px;
@@ -468,7 +471,7 @@
   }
 
   .contact-body {
-    padding: 0 16px 56px;
+    padding: 0 16px 40px; /* consistent with tablet but smaller side padding */
   }
 
   .contact-inner {
@@ -556,7 +559,7 @@
 /* -------- SMALL MOBILE (up to 400px) -------- */
 @media (max-width: 400px) {
   .hero {
-    padding: 28px 12px 24px;
+    padding: 28px 12px 20px;
   }
   .hero h1 {
     font-size: clamp(24px, 6vw, 30px);
@@ -566,7 +569,7 @@
   }
 
   .contact-body {
-    padding: 0 12px 40px;
+    padding: 0 12px 32px;
   }
 
   .form-card {
