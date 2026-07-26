@@ -20,7 +20,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ===== INTRO ===== */}
+       
       <section className="about-intro">
         <div className="about-intro-text">
           <h2>
@@ -32,7 +32,7 @@ export default function About() {
             has been defined by a relentless pursuit of quality and customer success.
           </p>
           <p>
-            Today, we work with over 2,500 teams across 50+ countries, delivering
+            Today, we work with over 2,500 teams across 50+ cities, delivering
             solutions that make a real difference. Our commitment to innovation
             continues to drive everything we do.
           </p>
@@ -48,7 +48,7 @@ export default function About() {
             </div>
             <div className="about-stat">
               <span className="stat-num">50+</span>
-              <span className="stat-label">Countries Served</span>
+              <span className="stat-label">Cities Served</span>
             </div>
             <div className="about-stat">
               <span className="stat-num">99.9%</span>
@@ -73,7 +73,7 @@ export default function About() {
         <div className="about-section">
           <div className="about-section-label">
             <div className="about-eyebrow">Our Journey</div>
-            <h2>Milestones that <span className="highlight">define us</span></h2>
+            <h2>Milestones that <span className="highlight">Define us</span></h2>
           </div>
 
           <div className="about-timeline">
@@ -145,34 +145,34 @@ export default function About() {
         <div className="leaders-grid">
           <div className="leader-card">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
-              alt="John Smith"
+              src=""
+              alt="Director img"
               className="leader-banner"
             />
             <div className="leader-info">
-              <div className="leader-role">CEO & Founder</div>
-              <div className="leader-name">John Smith</div>
-              <div className="leader-org">Since 1999</div>
+              <div className="leader-role">Director PGC </div>
+              <div className="leader-name">Ch Muhammad Akram</div>
+              <div className="leader-org">Since 2010</div>
             </div>
             <div className="leader-body">
               <div className="leader-quote">
                 "Innovation is not just about technology—it's about creating meaningful change."
               </div>
               <p className="leader-bio">
-                With 25+ years of experience, John has led the company from a small startup to a global force.
+                With 25+ years of experience, Ch Muhammad Akram  has led the company from a small startup to a global force.
               </p>
             </div>
           </div>
 
           <div className="leader-card">
             <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=600&fit=crop"
-              alt="Sarah Johnson"
+              src=""
+              alt="Principal img"
               className="leader-banner"
             />
             <div className="leader-info">
-              <div className="leader-role">Chief Technology Officer</div>
-              <div className="leader-name">Sarah Johnson</div>
+              <div className="leader-role">Principal</div>
+              <div className="leader-name">Asad khattak</div>
               <div className="leader-org">Since 2010</div>
             </div>
             <div className="leader-body">
