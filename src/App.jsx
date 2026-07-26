@@ -56,10 +56,10 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Route>
 
-      {/* ADMIN LOGIN */}
+  
       <Route path="/admin/login" element={<AdminLogin />} />
 
-      {/* ADMIN PROTECTED ROUTES */}
+      
       <Route
         path="/admin"
         element={
