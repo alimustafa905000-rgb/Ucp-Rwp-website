@@ -21,24 +21,19 @@ export default function Projects() {
   // Hero section
   const [hero, setHero] = useState({
     title: "Final Year Projects",
-    description: "Discover the groundbreaking work of our final-year students.",
+    description: "Discover the groundbreaking work of our final‑year students.",
     icon: "🚀",
     badge: "Showcase",
   });
 
-  // ===== Helper: empty project =====
+  // ===== Helper: empty project (matches public PROJECTS structure) =====
   function getEmptyProject() {
     return {
       title: "",
       description: "",
-      imageUrl: "",
+      image: "",          // will store base64 or URL
       tech: [],
-      links: { github: "", demo: "", documentation: "" },
-      category: "",
-      students: [],
-      supervisor: "",
-      department: "",
-      batch: "",
+      link: "",           // single URL
     };
   }
 
@@ -47,7 +42,7 @@ export default function Projects() {
     setLoading(true);
     try {
       const data = await projectsService.get();
-      // ✅ Ensure it's always an array
+      // Ensure it's always an array and map to expected structure if needed
       setProjects(Array.isArray(data) ? data : []);
       setError(null);
     } catch (err) {
@@ -64,7 +59,7 @@ export default function Projects() {
     if (savedHero) {
       try {
         setHero(JSON.parse(savedHero));
-      } catch (e) {}
+      } catch (e) { }
     }
   }, [fetchProjects]);
 
@@ -108,30 +103,22 @@ export default function Projects() {
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
-    if (name.includes(".")) {
-      const [parent, child] = name.split(".");
-      setFormData((prev) => ({
-        ...prev,
-        [parent]: { ...(prev[parent] || {}), [child]: value },
-      }));
-      return;
-    }
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Image upload handler
+  // Image upload handler – stores base64 in `image` field
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onloadend = () => {
-      setFormData((prev) => ({ ...prev, imageUrl: reader.result }));
+      setFormData((prev) => ({ ...prev, image: reader.result }));
     };
     reader.readAsDataURL(file);
   };
 
   const handleRemoveImage = () => {
-    setFormData((prev) => ({ ...prev, imageUrl: "" }));
+    setFormData((prev) => ({ ...prev, image: "" }));
   };
 
   // Technologies management
@@ -153,25 +140,6 @@ export default function Projects() {
     }));
   };
 
-  // Students management
-  const addStudent = () => {
-    const studentInput = document.getElementById("studentInput");
-    if (studentInput) {
-      const student = studentInput.value.trim();
-      if (student && !formData.students.includes(student)) {
-        setFormData((prev) => ({ ...prev, students: [...prev.students, student] }));
-        studentInput.value = "";
-      }
-    }
-  };
-
-  const removeStudent = (student) => {
-    setFormData((prev) => ({
-      ...prev,
-      students: prev.students.filter((s) => s !== student),
-    }));
-  };
-
   // Submit form
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -189,7 +157,7 @@ export default function Projects() {
       }
       setShowModal(false);
       setError(null);
-      fetchProjects();
+      fetchProjects(); // refresh list
     } catch (err) {
       setError("Failed to save project.");
       console.error(err);
@@ -203,7 +171,7 @@ export default function Projects() {
       p.title?.toLowerCase().includes(q) ||
       p.description?.toLowerCase().includes(q) ||
       (Array.isArray(p.tech) && p.tech.some((t) => t.toLowerCase().includes(q))) ||
-      p.category?.toLowerCase().includes(q)
+      p.link?.toLowerCase().includes(q)
     );
   });
 
@@ -216,7 +184,7 @@ export default function Projects() {
         </div>
       )}
 
-      {/* Hero Section */}
+      {/* Hero Section Management */}
       <section className="mb-10 bg-gray-50 p-6 rounded-lg shadow">
         <h2 className="text-2xl font-bold mb-4">Hero Section Management</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -281,7 +249,7 @@ export default function Projects() {
       <div className="mb-4">
         <input
           type="text"
-          placeholder="Search by title, description, tech, category..."
+          placeholder="Search by title, description, tech, or link..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full border rounded px-4 py-2"
@@ -299,10 +267,10 @@ export default function Projects() {
                 Title
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Category
+                Technologies
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Tech
+                Link
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Actions
@@ -320,7 +288,6 @@ export default function Projects() {
               filteredProjects.map((project) => (
                 <tr key={project.id}>
                   <td className="px-6 py-4 whitespace-nowrap">{project.title}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{project.category || "-"}</td>
                   <td className="px-6 py-4">
                     <div className="flex flex-wrap gap-1">
                       {(Array.isArray(project.tech) ? project.tech.slice(0, 3) : []).map((t) => (
@@ -335,6 +302,20 @@ export default function Projects() {
                         <span className="text-xs text-gray-500">+{project.tech.length - 3}</span>
                       )}
                     </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline"
+                      >
+                        Link
+                      </a>
+                    ) : (
+                      "-"
+                    )}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <button
@@ -366,42 +347,25 @@ export default function Projects() {
       {/* Modal for Add/Edit */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6">
+          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6">
             <h2 className="text-2xl font-bold mb-4">
               {modalMode === "add" ? "Add New Project" : "Edit Project"}
             </h2>
             <form onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label className="block text-sm font-medium">Title *</label>
-                  <input
-                    type="text"
-                    name="title"
-                    value={formData.title}
-                    onChange={handleFormChange}
-                    className="w-full border rounded px-3 py-2"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium">Category</label>
-                  <select
-                    name="category"
-                    value={formData.category}
-                    onChange={handleFormChange}
-                    className="w-full border rounded px-3 py-2"
-                  >
-                    <option value="">Select category</option>
-                    <option value="Artificial Intelligence">Artificial Intelligence</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Blockchain">Blockchain</option>
-                    <option value="Robotics">Robotics</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="Cyber Security">Cyber Security</option>
-                  </select>
-                </div>
+              {/* Title */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium">Title *</label>
+                <input
+                  type="text"
+                  name="title"
+                  value={formData.title}
+                  onChange={handleFormChange}
+                  className="w-full border rounded px-3 py-2"
+                  required
+                />
               </div>
 
+              {/* Description */}
               <div className="mb-4">
                 <label className="block text-sm font-medium">Description *</label>
                 <textarea
@@ -424,7 +388,7 @@ export default function Projects() {
                     onChange={handleImageUpload}
                     className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                   />
-                  {formData.imageUrl && (
+                  {formData.image && (
                     <button
                       type="button"
                       onClick={handleRemoveImage}
@@ -434,10 +398,10 @@ export default function Projects() {
                     </button>
                   )}
                 </div>
-                {formData.imageUrl && (
+                {formData.image && (
                   <div className="mt-2">
                     <img
-                      src={formData.imageUrl}
+                      src={formData.image}
                       alt="Preview"
                       className="max-h-48 rounded border"
                     />
@@ -482,106 +446,17 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Links */}
+              {/* Project Link */}
               <div className="mb-4">
-                <label className="block text-sm font-medium">Project Links</label>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                  <input
-                    type="url"
-                    name="links.github"
-                    placeholder="GitHub URL"
-                    value={formData.links?.github || ""}
-                    onChange={handleFormChange}
-                    className="border rounded px-3 py-1"
-                  />
-                  <input
-                    type="url"
-                    name="links.demo"
-                    placeholder="Demo URL"
-                    value={formData.links?.demo || ""}
-                    onChange={handleFormChange}
-                    className="border rounded px-3 py-1"
-                  />
-                  <input
-                    type="url"
-                    name="links.documentation"
-                    placeholder="Documentation URL"
-                    value={formData.links?.documentation || ""}
-                    onChange={handleFormChange}
-                    className="border rounded px-3 py-1"
-                  />
-                </div>
-              </div>
-
-              {/* Student Information */}
-              <div className="mb-4">
-                <label className="block text-sm font-medium">Students</label>
-                <div className="flex flex-wrap gap-2 mb-2">
-                  {formData.students.map((student) => (
-                    <span
-                      key={student}
-                      className="bg-green-100 px-2 py-1 rounded flex items-center gap-1"
-                    >
-                      {student}
-                      <button
-                        type="button"
-                        onClick={() => removeStudent(student)}
-                        className="text-red-500 hover:text-red-700"
-                      >
-                        ×
-                      </button>
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-2">
-                  <input
-                    id="studentInput"
-                    type="text"
-                    placeholder="Add student name"
-                    className="border rounded px-3 py-1 flex-1"
-                  />
-                  <button
-                    type="button"
-                    onClick={addStudent}
-                    className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-600"
-                  >
-                    Add
-                  </button>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <div>
-                  <label className="block text-sm font-medium">Supervisor</label>
-                  <input
-                    type="text"
-                    name="supervisor"
-                    value={formData.supervisor || ""}
-                    onChange={handleFormChange}
-                    className="w-full border rounded px-3 py-2"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium">Department</label>
-                  <input
-                    type="text"
-                    name="department"
-                    value={formData.department || ""}
-                    onChange={handleFormChange}
-                    className="w-full border rounded px-3 py-2"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium">Batch</label>
-                  <input
-                    type="text"
-                    name="batch"
-                    value={formData.batch || ""}
-                    onChange={handleFormChange}
-                    className="w-full border rounded px-3 py-2"
-                    placeholder="2026"
-                  />
-                </div>
+                <label className="block text-sm font-medium">Project URL</label>
+                <input
+                  type="url"
+                  name="link"
+                  placeholder="https://example.com/project"
+                  value={formData.link || ""}
+                  onChange={handleFormChange}
+                  className="w-full border rounded px-3 py-2"
+                />
               </div>
 
               <div className="flex justify-end gap-3 mt-6">
@@ -611,78 +486,33 @@ export default function Projects() {
             <h2 className="text-2xl font-bold mb-2">{selectedProject.title}</h2>
             <p className="text-gray-600 mb-4">{selectedProject.description}</p>
 
-            {selectedProject.imageUrl && (
+            {selectedProject.image && (
               <img
-                src={selectedProject.imageUrl}
+                src={selectedProject.image}
                 alt={selectedProject.title}
                 className="max-h-64 rounded mb-4"
               />
             )}
 
             <div className="mb-2">
-              <strong>Category:</strong> {selectedProject.category || "-"}
-            </div>
-            <div className="mb-2">
               <strong>Technologies:</strong>{" "}
               {(Array.isArray(selectedProject.tech) ? selectedProject.tech.join(", ") : "-")}
             </div>
-            <div className="mb-2">
-              <strong>Links:</strong>
-              <ul className="list-disc ml-5">
-                {selectedProject.links?.github && (
-                  <li>
-                    <a
-                      href={selectedProject.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline"
-                    >
-                      GitHub
-                    </a>
-                  </li>
-                )}
-                {selectedProject.links?.demo && (
-                  <li>
-                    <a
-                      href={selectedProject.links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline"
-                    >
-                      Live Demo
-                    </a>
-                  </li>
-                )}
-                {selectedProject.links?.documentation && (
-                  <li>
-                    <a
-                      href={selectedProject.links.documentation}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline"
-                    >
-                      Documentation
-                    </a>
-                  </li>
-                )}
-                {!selectedProject.links?.github &&
-                  !selectedProject.links?.demo &&
-                  !selectedProject.links?.documentation && <li>No links</li>}
-              </ul>
-            </div>
 
-            <div className="mb-2">
-              <strong>Students:</strong>{" "}
-              {(Array.isArray(selectedProject.students) ? selectedProject.students.join(", ") : "-")}
-            </div>
-            <div className="mb-2">
-              <strong>Supervisor:</strong> {selectedProject.supervisor || "-"}
-            </div>
-            <div className="mb-2">
-              <strong>Department:</strong> {selectedProject.department || "-"}
-            </div>
             <div className="mb-4">
-              <strong>Batch:</strong> {selectedProject.batch || "-"}
+              <strong>Project Link:</strong>{" "}
+              {selectedProject.link ? (
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  {selectedProject.link}
+                </a>
+              ) : (
+                "-"
+              )}
             </div>
 
             <button
