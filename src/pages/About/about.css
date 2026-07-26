@@ -1,6 +1,4 @@
-/* ===== ABOUT PAGE STYLES ===== */
-
-/* ----- Hero ----- */
+ 
 .about-hero {
   padding: 60px 24px 72px;
   text-align: center;
@@ -93,7 +91,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ----- Intro ----- */
+
 .about-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -129,7 +127,7 @@
   margin-bottom: 14px;
 }
 
-/* Stats row */
+ 
 .about-stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -255,8 +253,7 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-/* ----- Section wrapper ----- */
+ 
 .about-section {
   padding: 80px 60px;
   max-width: 1200px;
@@ -294,7 +291,7 @@
   line-height: 1.15;
 }
 
-/* ----- Journey / Timeline ----- */
+ 
 .about-journey {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
@@ -426,7 +423,7 @@
 .tl-item.left .tl-center { grid-column: 2; }
 .tl-item.left .tl-empty { grid-column: 3; }
 
-/* ----- Leadership ----- */
+ 
 .about-leadership {
   padding: 80px 60px;
   max-width: 1100px;
@@ -521,8 +518,7 @@
   color: var(--text-muted, #5B6F8C);
   line-height: 1.75;
 }
-
-/* ----- Values ----- */
+ 
 .about-values {
   background: linear-gradient(180deg, rgba(237, 246, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
   padding: 80px 60px;
@@ -642,11 +638,7 @@
   text-align: center;
 }
 
-/* ============================================================
-   SCROLL ANIMATIONS – add these classes to elements you want
-   to fade in on scroll. Use .scroll-fade-up, .scroll-fade-left,
-   .scroll-fade-right, or .scroll-fade-scale.
-   ============================================================ */
+  
 
 .scroll-fade-up {
   opacity: 0;
@@ -676,7 +668,7 @@
               transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Visible state – you need to add class 'visible' via JS when element enters viewport */
+ 
 .scroll-fade-up.visible,
 .scroll-fade-left.visible,
 .scroll-fade-right.visible,
@@ -685,7 +677,7 @@
   transform: translateX(0) translateY(0) scale(1);
 }
 
-/* Optional staggered delay for children */
+ 
 .stagger-children > *:nth-child(1) { transition-delay: 0.05s; }
 .stagger-children > *:nth-child(2) { transition-delay: 0.10s; }
 .stagger-children > *:nth-child(3) { transition-delay: 0.15s; }
@@ -693,11 +685,6 @@
 .stagger-children > *:nth-child(5) { transition-delay: 0.25s; }
 .stagger-children > *:nth-child(6) { transition-delay: 0.30s; }
 
-/* ============================================================
-   RESPONSIVE – TIGHTENED SPACING FOR TABLETS & MOBILE
-   ============================================================ */
-
-/* --- Laptops & small desktops (max-width: 1024px) --- */
 @media (max-width: 1024px) {
   .about-intro {
     padding: 60px 40px;
@@ -723,7 +710,7 @@
   }
 }
 
-/* --- Tablets (max-width: 768px) --- */
+ 
 @media (max-width: 768px) {
   .about-hero {
     min-height: 40vh;
@@ -859,7 +846,7 @@
   }
 }
 
-/* --- Small mobile (max-width: 480px) --- */
+ 
 @media (max-width: 480px) {
   .about-hero {
     padding: 40px 16px 28px;
