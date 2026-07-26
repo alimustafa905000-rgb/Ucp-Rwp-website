@@ -61,8 +61,8 @@ export const societiesData = [
       },
       {
         "name": "Ali Mustafa",
-        "designation": "Frontend Engineer",
-        "skills": ["Html", "Css", "Javascript","Tailwindcss","Bootstrap","React","Python","c++","Sql","MangoseDb",],
+        "designation": "React Developer",
+        "skills": ["Html", "Css", "Javascript","Tailwindcss","Bootstrap","React","Python","c++","Sql","MangoDb",],
         "linkedin": "#",
         "github": "#",
         "image": "/images/team/ali-imge.jpeg"
