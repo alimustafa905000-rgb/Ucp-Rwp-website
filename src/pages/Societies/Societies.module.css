@@ -1,6 +1,3 @@
-/* ============================================================
-   ROOT VARIABLES (adjust to match your theme)
-   ============================================================ */
 :root {
     --blue-accent: #2563EB;
     --purple: #7C3AED;
@@ -14,9 +11,6 @@
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
 .hero {
     padding: 60px 24px 72px;
     text-align: center;
@@ -36,8 +30,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 30% 40%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
+    background: ffff;
     animation: heroGlow 20s ease-in-out infinite alternate;
     z-index: 0;
 }
@@ -46,7 +39,6 @@
     0% {
         transform: translate(0, 0) scale(1);
     }
-
     100% {
         transform: translate(-10%, 10%) scale(1.2);
     }
@@ -109,7 +101,6 @@
     0% {
         filter: drop-shadow(0 4px 20px rgba(37, 99, 235, 0.15));
     }
-
     100% {
         filter: drop-shadow(0 4px 40px rgba(124, 58, 237, 0.4));
     }
@@ -130,7 +121,6 @@
         opacity: 0;
         transform: translateY(-20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -142,16 +132,12 @@
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* ============================================================
-   SOCIETY CARDS GRID – Enhanced with animations & hover effects
-   ============================================================ */
 .section {
     padding: 40px 60px 80px;
     max-width: 1200px;
@@ -195,9 +181,9 @@
 }
 
 .section-label h2 .highlight {
-    background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple) 40%, var(--red-accent) 80%);
+    color: red;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
     background-clip: text;
     display: inline-block;
     filter: drop-shadow(0 2px 12px rgba(37, 99, 235, 0.10));
@@ -228,27 +214,21 @@
     transform: perspective(1000px) rotateX(0) rotateY(0) scale(1);
 }
 
-/* Staggered entrance delays – set inline via JS, but we keep fallback */
 .society-card:nth-child(1) {
     animation-delay: 0.05s;
 }
-
 .society-card:nth-child(2) {
     animation-delay: 0.10s;
 }
-
 .society-card:nth-child(3) {
     animation-delay: 0.15s;
 }
-
 .society-card:nth-child(4) {
     animation-delay: 0.20s;
 }
-
 .society-card:nth-child(5) {
     animation-delay: 0.25s;
 }
-
 .society-card:nth-child(6) {
     animation-delay: 0.30s;
 }
@@ -258,7 +238,6 @@
         opacity: 0;
         transform: translateY(40px) scale(0.96);
     }
-
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -429,7 +408,7 @@
 }
 
 .society-card .btn-sm-primary {
-    background: var(--blue-accent);
+    background: var(--red-accent);
     color: white;
     box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
 }
@@ -447,6 +426,7 @@
 .society-card .btn-sm-primary:hover {
     transform: translateY(-3px) scale(1.04);
     box-shadow: 0 8px 32px rgba(124, 58, 237, 0.35);
+    color: black;
 }
 
 .society-card .btn-sm-primary:hover::before {
@@ -458,9 +438,6 @@
     z-index: 1;
 }
 
-/* ============================================================
-   DETAIL VIEW — IMPROVED WITH ANIMATIONS
-   ============================================================ */
 .detail-view {
     display: none;
     padding: 30px 60px 80px;
@@ -574,9 +551,6 @@
     animation: fadeInUp 0.6s 0.2s both;
 }
 
-/* ============================================================
-   EXTRA SECTIONS: Mission, Objectives, etc. — Slide-in animations
-   ============================================================ */
 .detail-mission,
 .detail-objectives,
 .detail-activities,
@@ -599,23 +573,18 @@
 .detail-mission {
     animation-delay: 0.15s;
 }
-
 .detail-objectives {
     animation-delay: 0.20s;
 }
-
 .detail-activities {
     animation-delay: 0.25s;
 }
-
 .detail-vision {
     animation-delay: 0.30s;
 }
-
 .detail-contact {
     animation-delay: 0.35s;
 }
-
 .detail-motto {
     animation-delay: 0.40s;
 }
@@ -625,7 +594,6 @@
         opacity: 0;
         transform: translateX(-30px) scale(0.98);
     }
-
     to {
         opacity: 1;
         transform: translateX(0) scale(1);
@@ -769,9 +737,6 @@
     font-size: 1.6rem;
 }
 
-/* ============================================================
-   TEAM SECTION — Enhanced with floating & interactive effects
-   ============================================================ */
 .team-section {
     margin-top: 12px;
     animation: fadeInUp 0.8s 0.45s both;
@@ -837,7 +802,6 @@
         transform: scaleX(0);
         opacity: 0;
     }
-
     100% {
         transform: scaleX(1);
         opacity: 1;
@@ -848,7 +812,6 @@
     0% {
         left: -100%;
     }
-
     100% {
         left: 100%;
     }
@@ -862,7 +825,6 @@
     animation: fadeInUp 0.8s 0.2s ease both;
 }
 
-/* ── TEAM GRID ── */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -889,39 +851,30 @@
 .team-member:nth-child(1) {
     animation-delay: 0.04s;
 }
-
 .team-member:nth-child(2) {
     animation-delay: 0.08s;
 }
-
 .team-member:nth-child(3) {
     animation-delay: 0.12s;
 }
-
 .team-member:nth-child(4) {
     animation-delay: 0.16s;
 }
-
 .team-member:nth-child(5) {
     animation-delay: 0.20s;
 }
-
 .team-member:nth-child(6) {
     animation-delay: 0.24s;
 }
-
 .team-member:nth-child(7) {
     animation-delay: 0.28s;
 }
-
 .team-member:nth-child(8) {
     animation-delay: 0.32s;
 }
-
 .team-member:nth-child(9) {
     animation-delay: 0.36s;
 }
-
 .team-member:nth-child(10) {
     animation-delay: 0.40s;
 }
@@ -995,10 +948,6 @@
     box-shadow: 0 12px 48px rgba(37, 99, 235, 0.25), 0 0 0 4px rgba(37, 99, 235, 0.08);
 }
 
-
- 
-
- 
 .team-member .member-name {
     font-size: 1.05rem;
     font-weight: 700;
@@ -1123,26 +1072,19 @@
 }
 
 @keyframes pulseDot {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.3);
     }
 }
 
-/* ============================================================
-   RESPONSIVE – Enhanced breakpoints
-   ============================================================ */
 @media (max-width: 1200px) {
     .team-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
     }
-
     .societies-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
@@ -1154,16 +1096,13 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 22px;
     }
-
     .societies-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 22px;
     }
-
     .detail-view {
         padding: 20px 30px 60px;
     }
-
     .team-member .avatar {
         width: 110px;
         height: 110px;
@@ -1176,18 +1115,15 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
     }
-
     .societies-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
     }
-
     .detail-header {
         flex-direction: column;
         text-align: center;
         gap: 16px;
     }
-
     .detail-description,
     .detail-mission,
     .detail-objectives,
@@ -1197,31 +1133,25 @@
     .detail-motto {
         padding: 16px 18px;
     }
-
     .detail-view {
         padding: 16px 16px 50px;
     }
-
     .detail-icon {
         width: 64px;
         height: 64px;
         font-size: 1.8rem;
     }
-
     .team-member .avatar {
         width: 90px;
         height: 90px;
         font-size: 26px;
     }
-
     .team-member .member-name {
         font-size: 0.92rem;
     }
-
     .team-heading-wrapper .team-heading {
         font-size: 1.6rem;
     }
-
     .section {
         padding: 30px 20px 50px;
     }
@@ -1232,99 +1162,78 @@
         grid-template-columns: 1fr 1fr;
         gap: 14px;
     }
-
     .societies-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-
     .team-member {
         border-radius: 16px;
         padding: 0 0 14px 0;
     }
-
     .team-member .avatar {
         width: 80px;
         height: 80px;
         font-size: 22px;
         border-width: 3px;
     }
-
     .team-member .avatar-wrap {
         padding-top: 14px;
         padding-bottom: 4px;
     }
-
     .team-member .member-name {
         font-size: 0.8rem;
     }
-
     .team-member .member-designation {
         font-size: 0.6rem;
     }
-
     .team-member .member-skills span {
         font-size: 0.5rem;
         padding: 2px 8px;
     }
-
     .team-member .member-links a {
         width: 30px;
         height: 30px;
         font-size: 0.7rem;
     }
-
     .team-member .member-badge {
         top: 8px;
         right: 8px;
         width: 8px;
         height: 8px;
     }
-
     .section {
         padding: 20px 12px 40px;
     }
-
     .detail-view {
         padding: 12px 10px 40px;
     }
-
     .team-heading-wrapper .team-heading {
         font-size: 1.3rem;
         gap: 10px;
     }
-
     .team-heading-wrapper .team-heading i {
         padding: 10px;
         font-size: 1.1rem;
     }
-
     .team-heading-wrapper .team-sub {
         font-size: 0.85rem;
     }
-
     .team-heading-wrapper .heading-underline {
         width: 60px;
         height: 3px;
     }
-
     .hero {
         padding: 40px 16px 50px;
         min-height: 35vh;
     }
-
     .hero-title {
         font-size: clamp(32px, 10vw, 42px);
     }
-
     .hero-desc {
         font-size: 15px;
     }
 }
 
-/* ============================================================
-   ENHANCED DETAIL SECTIONS – Card style with icons & gradients
-   ============================================================ */
 .detail-mission,
 .detail-objectives,
 .detail-activities,
@@ -1343,7 +1252,6 @@
     animation: slideInLeft 0.6s var(--transition-bounce) forwards;
 }
 
-/* Add a subtle gradient overlay */
 .detail-mission::after,
 .detail-objectives::after,
 .detail-activities::after,
@@ -1408,7 +1316,6 @@
     box-shadow: 0 12px 40px rgba(26, 60, 110, 0.12);
 }
 
-/* Headings with icons */
 .detail-mission h2,
 .detail-objectives h2,
 .detail-activities h2,
@@ -1428,7 +1335,6 @@
 
 .detail-mission h2::before {
     content: '\f05a';
-    /* fa-info-circle */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: var(--blue-accent);
@@ -1437,7 +1343,6 @@
 
 .detail-objectives h2::before {
     content: '\f0ae';
-    /* fa-bullseye */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: var(--purple);
@@ -1446,7 +1351,6 @@
 
 .detail-activities h2::before {
     content: '\f0b1';
-    /* fa-tasks */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: #e67e22;
@@ -1455,7 +1359,6 @@
 
 .detail-vision h2::before {
     content: '\f075';
-    /* fa-eye */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: #1abc9c;
@@ -1464,7 +1367,6 @@
 
 .detail-contact h2::before {
     content: '\f095';
-    /* fa-phone */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: #f39c12;
@@ -1473,14 +1375,12 @@
 
 .detail-motto h2::before {
     content: '\f10d';
-    /* fa-quote-left */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: var(--red-accent);
     font-size: 1.4rem;
 }
 
-/* Text content */
 .detail-mission p,
 .detail-vision p {
     font-size: 1rem;
@@ -1491,7 +1391,6 @@
     z-index: 1;
 }
 
-/* Objectives & Activities – Grid with icons */
 .detail-objectives ul,
 .detail-activities ul {
     list-style: none;
@@ -1522,7 +1421,6 @@
 .detail-objectives li::before,
 .detail-activities li::before {
     content: '\f00c';
-    /* fa-check */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     position: absolute;
@@ -1545,7 +1443,6 @@
     color: var(--purple);
 }
 
-/* Contact – flex cards */
 .detail-contact p {
     display: inline-flex;
     align-items: center;
@@ -1576,7 +1473,6 @@
     flex-shrink: 0;
 }
 
-/* Motto – larger with decorative quotes */
 .detail-motto blockquote {
     font-size: 1.4rem;
     font-weight: 600;
@@ -1614,19 +1510,15 @@
     font-style: normal;
 }
 
-/* Responsive for Objectives/Activities grid */
 @media (max-width: 600px) {
-
     .detail-objectives ul,
     .detail-activities ul {
         grid-template-columns: 1fr;
     }
-
     .detail-contact p {
         display: flex;
         margin: 6px 0;
     }
-
     .detail-motto blockquote {
         font-size: 1.1rem;
         padding: 0.5rem 1rem 0.5rem 2rem;
@@ -1637,53 +1529,40 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* keeps aspect ratio, fills the container */
     border-radius: 50%;
-    /* makes it circular – optional, remove if you want square */
     background: white;
-    /* ensures clean background for transparent logos */
     padding: 4px;
-    /* gives a small breathing space */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Optional: hover effect on the logo image inside the card */
 .society-card:hover .society-logo {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure .icon-wrap accommodates images nicely */
 .icon-wrap {
     width: 80px;
-    /* or whatever you already have */
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    /* if you want circular container */
     background: rgba(0, 0, 0, 0.03);
     flex-shrink: 0;
     overflow: hidden;
-    /* ensures the image doesn't break out */
 }
 
-/* --- Detail view logo (inside .detail-icon) --- */
 .detail-logo {
     width: 140px;
-    /* larger in detail view */
     height: 140px;
     object-fit: contain;
     border-radius: 16px;
-    /* rounded rectangle, can be changed to 50% for circle */
     background: white;
     padding: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
-/* Make the detail icon container adapt */
 .detail-icon {
     flex-shrink: 0;
     display: flex;
@@ -1694,17 +1573,14 @@
     padding: 10px;
 }
 
-/* --- Responsive sizes for smaller screens --- */
 @media (max-width: 768px) {
     .icon-wrap {
         width: 60px;
         height: 60px;
     }
-
     .society-logo {
         padding: 2px;
     }
-
     .detail-logo {
         width: 100px;
         height: 100px;
@@ -1716,7 +1592,6 @@
         width: 50px;
         height: 50px;
     }
-
     .detail-logo {
         width: 80px;
         height: 80px;
