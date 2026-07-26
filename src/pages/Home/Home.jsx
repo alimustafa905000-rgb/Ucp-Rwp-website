@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO */}
+      
       <section className={styles.hero} id="home">
         <div className={styles['hero-bg-circles']}>
           <div className={`${styles.circle} ${styles.c1}`}></div>
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
             <div className={styles['hero-social-proof']}>
               <div className={styles['avatar-stack']}>
-                {/* Add student photos at: public/images/ali-image.jpeg, arsal-image.jpeg, laraib.jpeg */}
+                
                 <img src="/images/team/ali-imge.jpeg" alt="Student" onError={(e) => { e.target.style.background = '#CBD5E1'; }} />
                 <img src="/images/team/arsal-image.jpeg" alt="Student" onError={(e) => { e.target.style.background = '#BAC8FF'; }} />
                 <img src="/images/team/laraib.jpeg" alt="Student" onError={(e) => { e.target.style.background = '#FCA5A5'; }} />
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
           <div className={styles['hero-image-wrap']}>
             <div className={styles['hero-img-card']}>
-              {/* Add campus building photo at: public/images/campus-building.jpg */}
+              
               <img
                 src="/images/team/campus-image.jfif"
                 alt="UCP Rawalpindi Campus Building"
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT PREVIEW */}
+      
       <section className={styles['about-section']} id="about">
         <div className={styles['about-inner']}>
           <div className={`${styles['about-img-wrap']} reveal-left`}>
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS */}
+      
       <section className={styles['stats-section']}>
         <div className={styles['stats-inner']}>
           <div className={`${styles['stat-item']} reveal`}>
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VIDEO AD CARD — click to upload your own promo video */}
+      
       <section className={styles['ad-section']}>
         <div className={styles['ad-inner']}>
           <div className={`${styles['ad-card']} reveal`} onClick={handleCardClick}>
