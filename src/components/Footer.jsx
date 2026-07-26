@@ -49,7 +49,7 @@ export default function Footer() {
           <ul className="contact-list">
             <li><span className="icon">📍</span> UCP Rawalpindi, 6th Road, 46000</li>
             <li><span className="icon">📞</span> (051) 4421672</li>
-            <li><span className="icon">✉️</span> syedashahnoor1412@gmail.com</li>
+            <li><span className="icon">✉️</span> Principal.rawalpindi@ucp.edu.pk</li>
           </ul>
         </div>
 
