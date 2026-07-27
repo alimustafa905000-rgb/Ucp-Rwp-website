@@ -37,7 +37,7 @@ export default {
   corePlugins: { preflight: false },
   plugins: [
     function ({ addComponents, addUtilities }) {
-      // ----- Component classes (for reusable UI blocks) -----
+       
       addComponents({
         ".glass-card": {
           background: "rgba(255, 255, 255, 0.08)",
@@ -75,7 +75,7 @@ export default {
         },
       });
 
-      // ----- Utility classes (for animations) -----
+      
       addUtilities({
         ".animate-fadeIn": {
           animation: "fadeIn 0.3s ease-out",
