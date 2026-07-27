@@ -3,9 +3,8 @@ import clsx from "clsx";
 import { useState } from "react";
 import { SOCIETIES } from "../config/societies";
 import {
-  LayoutDashboard, Home, Info, Bell, BookOpen, FolderKanban,
-  Building2, MessageSquare, Users, ChevronDown, X,
-  Settings // <-- added Settings icon
+  
+  
 } from "lucide-react";
 
 const nav = ({ isActive }) =>
@@ -21,7 +20,7 @@ export default function Sidebar({ open, onClose }) {
 
   return (
     <>
-      {/* Overlay */}
+    
       <div onClick={onClose} className={clsx("fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden", open ? "block" : "hidden")} />
 
       <aside
@@ -31,7 +30,7 @@ export default function Sidebar({ open, onClose }) {
           "bg-slate-900/90 backdrop-blur-xl border-r border-white/10 shadow-2xl shadow-indigo-500/10"
         )}
       >
-        {/* ---- Logo & Brand ---- */}
+        
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
             <div className="relative">
@@ -59,7 +58,7 @@ export default function Sidebar({ open, onClose }) {
           </button>
         </div>
 
-        {/* ---- Navigation ---- */}
+      
         <nav className="pgd-scroll h-[calc(100vh-180px)] overflow-y-auto pr-1 space-y-1.5">
           <NavLink to="/admin" end className={nav}>
             <LayoutDashboard className="w-4 h-4 group-hover:scale-110 group-hover:rotate-[-6deg] transition-transform duration-200" />
@@ -94,7 +93,7 @@ export default function Sidebar({ open, onClose }) {
             Messages
           </NavLink>
 
-          {/* Societies accordion */}
+          
           <button
             onClick={() => setSocOpen((s) => !s)}
             className="mt-2 w-full flex items-center justify-between rounded-xl px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all"
@@ -126,7 +125,7 @@ export default function Sidebar({ open, onClose }) {
           </div>
         </nav>
 
-        {/* ---- Footer: User + Settings ---- */}
+        
         <div className="absolute bottom-4 left-4 right-4 border-t border-white/10 pt-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3 text-white/60 text-xs">
