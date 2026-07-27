@@ -8,11 +8,10 @@ export default function Layout() {
   const { progress, scrolled, showBackToTop } = useScrollEffects();
   const location = useLocation();
 
-  // Drives a short fade + slide-up transition every time the route changes,
-  // so navigating between pages never feels like an abrupt hard cut.
+  
   const [transitionStage, setTransitionStage] = useState('page-enter');
 
-  // Scroll to top on every route change, just like navigating between pages
+ 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
     setTransitionStage('page-enter');

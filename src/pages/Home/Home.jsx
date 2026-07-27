@@ -53,7 +53,7 @@ export default function Home() {
               Punjab College <span className={styles.highlight}>Ucp Campus</span>
             </h1>
             <p className={styles['hero-desc']}>
-              UCP Rawalpindi is a constituent college of the University of Central Punjab (UCP), Lahore.
+            Constituent Colleges are educational institutions that are maintained and administrated by the university itself. Constituent Colleges of UCP provide students in cities across Punjab the opportunity to earn Bachelors and ADP degrees from UCP
             </p>
             <div className={styles['hero-ctas']}>
               <Link to="/campus-info" className={styles['btn-primary']}>🎓 Explore Programs →</Link>
@@ -106,7 +106,7 @@ export default function Home() {
       <section className={styles['about-section']} id="about">
         <div className={styles['about-inner']}>
           <div className={`${styles['about-img-wrap']} reveal-left`}>
-            {/* Add campus photo at: public/images/campus-wide.jpg */}
+            
             <img
               src="/images/team/campus-front.jfif"
               alt="UCP Campus"
@@ -118,16 +118,12 @@ export default function Home() {
           </div>
           <div className={`${styles['about-content']} reveal-right`}>
             <div className={styles.eyebrow}>🏛 About UCP</div>
-            <h2>A legacy of <span className={styles.highlight}>excellence</span> since 1999</h2>
+            <h2>A legacy of <span className={styles.highlight}>excellence</span> since 2002</h2>
             <p>
-              The University of Central Punjab stands among Pakistan's leading private institutions, driven by a
-              commitment to academic rigour, innovation, and holistic student development. With a sprawling modern
-              campus in the heart of Lahore, UCP brings together diverse minds from across the country and beyond.
+             Constituent Colleges are educational institutions that are maintained and administrated by the university itself. Constituent Colleges of UCP provide students in cities across Punjab the opportunity to earn Bachelors and ADP degrees from UCP. Our reputation for academic excellence and commitment to equip students with the knowledge, skills and drive to lead in the 21st century is unprecedented. 
             </p>
             <p>
-              From internationally accredited programmes to vibrant student societies, from research labs pushing
-              boundaries to a faculty that includes some of the brightest minds in their fields — UCP is where
-              futures take shape.
+               Since 2002 as the first private chartered University in the country,  UNIVERSITY OF CENTRAL PUNJAB UNIVERSITY OF CENTRAL PUNJAB for its students by equipping them with well rounded educational experience. UNIVERSITY OF CENTRAL PUNJAB for its students by equipping them with well rounded educational experience. has opened a world of infinite opportunities has opened a world of infinite opportunities has opened a world of infinite opportunities for its students by equipping them with well rounded educational experience.
             </p>
             <Link to="/about" className={styles['learn-more']}>Learn more about UCP <span className={styles.arrow}>→</span></Link>
           </div>
@@ -144,7 +140,7 @@ export default function Home() {
           </div>
           <div className={`${styles['stat-item']} reveal`} style={{ transitionDelay: '0.1s' }}>
             <div className={styles['stat-icon']}>📚</div>
-            <div className={styles['stat-num']}><span className="count" data-target="10">0</span><span className={styles.accent}>+</span></div>
+            <div className={styles['stat-num']}><span className="count" data-target="20">0</span><span className={styles.accent}>+</span></div>
             <div className={styles['stat-label']}>Programs Offered</div>
           </div>
           <div className={`${styles['stat-item']} reveal`} style={{ transitionDelay: '0.2s' }}>

@@ -1,4 +1,4 @@
-/* ===== ROOT VARIABLES ===== */
+ 
 :root {
   --bg: #f8fafc;
   --blue-primary: #1a3c6e;
@@ -10,14 +10,14 @@
   --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ===== PAGE WRAPPER ===== */
+ 
 .page-wrapper {
   padding-top: 72px;
   background: var(--bg);
   min-height: 100vh;
 }
 
-/* ===== HERO ===== */
+ 
 .hero {
   background: var(--bg);
   padding: 64px 24px 48px;
@@ -157,7 +157,7 @@
   }
 }
 
-/* ===== CONTACT BODY ===== */
+ 
 .contact-body {
   background: var(--bg);
   padding: 0 24px 80px;
@@ -172,7 +172,7 @@
   align-items: start;
 }
 
-/* ===== FORM CARD ===== */
+ 
 .form-card {
   background: #ffffff;
   border-radius: var(--radius);
@@ -299,7 +299,7 @@
   transform: scale(0.97);
 }
 
-/* ===== INFO STACK ===== */
+ 
 .info-stack {
   display: flex;
   flex-direction: column;
@@ -369,11 +369,7 @@
   margin: 0;
 }
 
-/* ============================================================
-   RESPONSIVE BREAKPOINTS
-   ============================================================ */
-
-/* -------- TABLET (768px – 1024px) -------- */
+ 
 @media (max-width: 1024px) {
   .contact-inner {
     grid-template-columns: 1fr 1fr;
@@ -389,14 +385,14 @@
   }
 
   .hero {
-    padding: 48px 20px 32px; /* reduced bottom padding from 40px → 32px */
+    padding: 48px 20px 32px;  
   }
   .hero h1 {
     font-size: clamp(32px, 5vw, 44px);
   }
 
   .contact-body {
-    padding: 0 20px 40px; /* reduced bottom padding from 80px → 40px */
+    padding: 0 20px 40px;  
   }
 
   .blob-1 {
@@ -427,7 +423,7 @@
   }
 }
 
-/* -------- MOBILE (up to 767px) -------- */
+ 
 @media (max-width: 767px) {
   .page-wrapper {
     padding-top: 56px;
@@ -546,7 +542,7 @@
     font-size: 12.5px;
   }
 
-  /* disable hover effects on touch devices */
+ 
   .form-card:hover,
   .info-card:hover {
     transform: none;
@@ -556,7 +552,7 @@
   }
 }
 
-/* -------- SMALL MOBILE (up to 400px) -------- */
+ 
 @media (max-width: 400px) {
   .hero {
     padding: 28px 12px 20px;
@@ -625,7 +621,7 @@
   }
 }
 
-/* -------- LAPTOP / DESKTOP (1025px+) -------- */
+ 
 @media (min-width: 1025px) {
   .contact-inner {
     grid-template-columns: 1.45fr 1fr;
@@ -642,7 +638,7 @@
   }
 }
 
-/* -------- LARGE SCREEN (1400px+) -------- */
+ 
 @media (min-width: 1400px) {
   .contact-inner {
     max-width: 1200px;

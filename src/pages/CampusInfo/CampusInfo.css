@@ -457,11 +457,7 @@ table tbody tr:nth-child(even) td {
   font-size: 1.1rem;
 }
 
-/* ============================================================
-   RESPONSIVE ADDITIONS - GAPS REMOVED FOR MOBILE & TABLET
-   ============================================================ */
-
-/* --- Laptops & small desktops (max-width: 1024px) --- */
+ 
 @media (max-width: 1024px) {
   .section {
     padding: 60px 40px;
@@ -482,7 +478,7 @@ table tbody tr:nth-child(even) td {
   }
 }
 
-/* --- Tablets (max-width: 768px) --- */
+ 
 @media (max-width: 768px) {
   .hero {
     min-height: 40vh;
@@ -520,7 +516,7 @@ table tbody tr:nth-child(even) td {
     font-size: clamp(1.4rem, 4vw, 1.8rem);
   }
 
-  /* Grid conversions with reduced gaps */
+  
   .grid-2 {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -550,7 +546,7 @@ table tbody tr:nth-child(even) td {
     margin-bottom: 8px;
   }
 
-  /* Stats */
+   
   .stat-highlight {
     padding: 14px 10px;
   }
@@ -569,7 +565,7 @@ table tbody tr:nth-child(even) td {
     margin-bottom: 4px;
   }
 
-  /* Features */
+   
   .feature-list {
     grid-template-columns: 1fr;
     gap: 4px;
@@ -585,7 +581,7 @@ table tbody tr:nth-child(even) td {
     width: 18px;
   }
 
-  /* Tables */
+ 
   .table-wrap {
     margin: 12px 0;
   }
@@ -600,7 +596,7 @@ table tbody tr:nth-child(even) td {
     padding: 6px 8px;
   }
 
-  /* Scholar cards */
+  
   .scholar-card {
     padding: 14px 16px;
   }
@@ -616,8 +612,7 @@ table tbody tr:nth-child(even) td {
   .scholar-card .discount {
     font-size: 1rem;
   }
-
-  /* Campus cards */
+ 
   .campus-card {
     padding: 18px 20px;
   }
@@ -630,14 +625,13 @@ table tbody tr:nth-child(even) td {
     font-size: 0.85rem;
   }
 
-  /* Club tags */
+ 
   .club-tag {
     font-size: 0.8rem;
     padding: 6px 16px;
     margin: 3px;
   }
-
-  /* Pills */
+ 
   .pill {
     font-size: 0.7rem;
     padding: 3px 10px;
@@ -646,7 +640,7 @@ table tbody tr:nth-child(even) td {
   }
 }
 
-/* --- Small mobile (max-width: 480px) --- */
+ 
 @media (max-width: 480px) {
   .hero {
     padding: 32px 12px 24px;
@@ -728,7 +722,7 @@ table tbody tr:nth-child(even) td {
     margin-bottom: 2px;
   }
 
-  /* Tables */
+  
   table {
     font-size: 0.7rem;
     min-width: 360px;
@@ -743,7 +737,7 @@ table tbody tr:nth-child(even) td {
     font-size: 0.65rem;
   }
 
-  /* Scholar cards */
+  
   .scholar-card {
     padding: 12px 14px;
     border-left-width: 3px;
@@ -762,7 +756,7 @@ table tbody tr:nth-child(even) td {
     font-size: 0.9rem;
   }
 
-  /* Campus cards */
+  
   .campus-card {
     padding: 14px 14px;
     gap: 4px;
@@ -780,14 +774,14 @@ table tbody tr:nth-child(even) td {
     font-size: 0.8rem;
   }
 
-  /* Club tags */
+  
   .club-tag {
     font-size: 0.7rem;
     padding: 4px 12px;
     margin: 2px;
   }
 
-  /* Pills */
+   
   .pill {
     font-size: 0.65rem;
     padding: 2px 8px;
@@ -811,7 +805,7 @@ table tbody tr:nth-child(even) td {
   }
 }
 
-/* --- Extra small (max-width: 360px) --- */
+ 
 @media (max-width: 360px) {
   .hero {
     padding: 24px 8px 16px;

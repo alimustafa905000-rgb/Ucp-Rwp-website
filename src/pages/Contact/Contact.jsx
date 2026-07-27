@@ -33,16 +33,14 @@ export default function Contact() {
       `Name: ${name}\nEmail: ${email}\nPhone: ${form.elements['phone'].value}\n` +
       `City: ${form.elements['city'].value}\nInterest: ${form.elements['interest'].value}\nMessage:\n${message}`;
 
-    window.location.href = `mailto:syedashahnoor1412@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:Principal.rawalpindi@ucp.edu.pk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     alert('Your email client will open with a pre-filled message. Please review and send.');
   }
 
   return (
     <div className={styles['page-wrapper']}>
       <section className={styles.hero}>
-        {/* <div className={styles['blob-1']}></div>
-        <div className={styles['blob-2']}></div>
-        <div className={styles['blob-3']}></div> */}
+  
         <div className={styles['hero-inner']}>
           <div className={styles.eyebrow}>
             <span className={styles.icon}>✉️</span> GET IN TOUCH
@@ -112,7 +110,7 @@ export default function Contact() {
             <div className={`${styles['info-card']} reveal reveal-right`} style={{ transitionDelay: '0.2s' }}>
               <div className={`${styles['info-icon']} ${styles['icon-red-bg']}`}>📞</div>
               <h3>Phone &amp; Email</h3>
-              <p>(051) 4421672<br />syedashahnoor1412@gmail.com</p>
+              <p>(051) 4421672<br />Principal.rawalpindi@ucp.edu.pk</p>
             </div>
           </div>
         </div>

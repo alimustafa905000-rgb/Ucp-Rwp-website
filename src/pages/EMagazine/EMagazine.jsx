@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import './EMagazine.css';
 
-// ============================================================
-// DUMMY DATA (replace with API fetch later)
-// ============================================================
+ 
 const DUMMY_MAGAZINES = [
   {
     id: 1,
@@ -35,7 +33,7 @@ export default function EMagazine() {
   const [coverExists, setCoverExists] = useState({});
   const [pdfExists, setPdfExists] = useState({});
 
-  // ---------- fetch magazines ----------
+   
   useEffect(() => {
     // TODO: Replace with actual API call
     const data = DUMMY_MAGAZINES;
@@ -43,7 +41,7 @@ export default function EMagazine() {
     if (data.length > 0) setSelectedMag(data[0]);
   }, []);
 
-  // ---------- check images & PDFs ----------
+  
   useEffect(() => {
     if (!selectedMag) return;
 
@@ -63,7 +61,7 @@ export default function EMagazine() {
     return () => { cancelled = true; };
   }, [selectedMag]);
 
-  // ---------- download ----------
+ 
   function downloadPdf() {
     if (!selectedMag) return;
     const a = document.createElement('a');
@@ -72,7 +70,7 @@ export default function EMagazine() {
     a.click();
   }
 
-  // ---------- read online (opens in new tab) ----------
+ 
   function readOnline() {
     if (!selectedMag) return;
     window.open(selectedMag.pdfUrl, '_blank');
@@ -84,7 +82,7 @@ export default function EMagazine() {
 
   return (
     <>
-      {/* HERO */}
+ 
       <section className="hero">
         <div className="hero-inner">
           <div className="eyebrow"><span className="icon">📖</span> Explore</div>
@@ -92,12 +90,11 @@ export default function EMagazine() {
           <p className="hero-desc">Our official university magazine — stories, research and campus life.</p>
         </div>
       </section>
-
-      {/* MAIN LAYOUT */}
+ 
       <section className="mag-section">
         <div className="mag-inner">
           <div className="mag-layout">
-            {/* -------- SIDEBAR -------- */}
+          
             <div className="mag-sidebar">
               <h3 className="sidebar-title">📚 All Issues</h3>
               <ul className="mag-list">
@@ -123,7 +120,7 @@ export default function EMagazine() {
               </ul>
             </div>
 
-            {/* -------- CONTENT -------- */}
+             
             <div className="mag-content">
               <div className="mag-cover-side">
                 <span className="cover-badge">E-Magazine</span>
@@ -158,7 +155,7 @@ export default function EMagazine() {
                   ))}
                 </div>
 
-                {/* TWO BUTTONS: Download + Read Online */}
+               
                 <div className="mag-actions">
                   <button
                     className="btn-download"

@@ -1,6 +1,4 @@
-/* ============================================================
-   ROOT VARIABLES (fallback)
-   ============================================================ */
+ 
 :root {
   --bg: #f8fafc;
   --blue-primary: #1a3c6e;
@@ -14,9 +12,7 @@
   --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ============================================================
-   HERO SECTION
-   ============================================================ */
+ 
 .hero {
   padding: 130px 24px 72px;
   text-align: center;
@@ -91,9 +87,7 @@
   to { opacity: 1; transform: none; }
 }
 
-/* ============================================================
-   MAGAZINE SECTION
-   ============================================================ */
+ 
 .mag-section {
   padding: 0 24px 80px;
   background: var(--bg);
@@ -104,7 +98,7 @@
   margin: 0 auto;
 }
 
-/* ----- LAYOUT: sidebar + content ----- */
+ 
 .mag-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -112,7 +106,7 @@
   align-items: start;
 }
 
-/* ----- SIDEBAR ----- */
+ 
 .mag-sidebar {
   background: #ffffff;
   border-radius: var(--radius);
@@ -230,7 +224,7 @@
   margin-top: 2px;
 }
 
-/* ----- RIGHT CONTENT (mag-cover-side + mag-info-side) ----- */
+ 
 .mag-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -303,7 +297,7 @@
   line-height: 1.5;
 }
 
-/* ----- INFO SIDE ----- */
+ 
 .mag-info-side {
   display: flex;
   flex-direction: column;
@@ -444,9 +438,7 @@
   transform: scale(0.96);
 }
 
-/* ============================================================
-   PDF VIEWER SECTION
-   ============================================================ */
+ 
 .pdf-viewer-section {
   padding: 0 24px 80px;
   background: var(--bg);
@@ -556,9 +548,7 @@
   padding: 20px;
 }
 
-/* ============================================================
-   LOADING STATE
-   ============================================================ */
+ 
 .loading-magazines {
   display: flex;
   align-items: center;
@@ -568,11 +558,7 @@
   color: var(--text-muted);
 }
 
-/* ============================================================
-   RESPONSIVE BREAKPOINTS
-   ============================================================ */
-
-/* ----- TABLET (max-width: 1024px) ----- */
+ 
 @media (max-width: 1024px) {
   .hero {
     padding: 100px 20px 56px;
@@ -703,7 +689,7 @@
   }
 }
 
-/* ----- MOBILE (max-width: 767px) ----- */
+ 
 @media (max-width: 767px) {
   .hero {
     padding: 80px 16px 40px;
@@ -728,14 +714,14 @@
     padding: 0 16px 56px;
   }
 
-  /* REORDERED: Magazine content first, then sidebar */
+  
   .mag-layout {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  /* Sidebar (issues list) now appears AFTER content */
+ 
   .mag-sidebar {
     order: 2;
     max-height: 260px;
@@ -744,7 +730,7 @@
     top: 0;
   }
 
-  /* Content (cover + details) appears FIRST */
+ 
   .mag-content {
     order: 1;
     padding: 20px 16px;
@@ -827,7 +813,7 @@
   }
 }
 
-/* ----- SMALL MOBILE (max-width: 400px) ----- */
+ 
 @media (max-width: 400px) {
   .hero {
     padding: 60px 12px 32px;
@@ -872,7 +858,7 @@
   }
 }
 
-/* ----- LARGE SCREEN (1400px+) ----- */
+ 
 @media (min-width: 1400px) {
   .hero {
     padding: 160px 24px 80px;

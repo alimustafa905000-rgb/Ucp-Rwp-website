@@ -8,7 +8,7 @@ const PROJECTS = [
     description: 'Plant Disease Detection System  developed using Deep Learning(EfficientNETB4) and Transfer learning.The System identifies 39 plant disease classes from leaf images through a user-friendly web application,supporting early disease detection and smart agriculture.',
     image: '/images/team/plantdisease-img.jpeg',  // 👈 replace with your local path
     tech: ['Python', 'TensorFlow', 'Deep Learning ','Neural Networks','Agriculture','Computer vision ','EfficientNETB4', 'Transfer Learning'],
-    link: 'https://example.com/drone-swarm',
+    link: ' http://localhost:5173/',
   },
   {
     id: 2,
@@ -122,6 +122,14 @@ const PROJECTS = [
     tech: ['Python', 'OpenCV', 'MediaPipe', 'YOLO', 'MAVLink'],
     link: 'https://example.com/gesture-drone',
   },
+  {
+       id: 16,
+    title: 'Travelexa',
+    description:'Travelexa is a Flutter-based mobile application that combines  travel planning,social networking, and destination discovery into a single platform. it enables users to create personalised journeys, connect with fellow travellers and local Guides,and enjoy a seamless,interactive travel experience powered by Appwrite backend services.',
+    image: '/images/team/travel-img.jpeg',
+    tech: ['Flutter', 'App Write'],
+    link: 'https://example.com/gesture-drone',
+  }
 ];
 
 

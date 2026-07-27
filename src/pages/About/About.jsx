@@ -4,14 +4,14 @@ import './about.css'; // Import the CSS for about page
 export default function About() {
   return (
     <>
-      {/* ===== HERO ===== */}
+      
       <section className="about-hero">
         <div className="about-hero-inner">
           <div className="about-eyebrow">
-            <span className="icon">✦</span> About Us
+           <span>explore</span>
           </div>
           <h1 className="about-hero-title">
-            Crafting <span className="gradient-text">Digital Excellence</span> Since 1999
+            Crafting <span className="gradient-text">Digital Excellence</span> Since 2002
           </h1>
           <p className="about-hero-desc">
             We're a team of passionate innovators dedicated to building solutions
@@ -39,7 +39,7 @@ export default function About() {
 
           <div className="about-stats-row">
             <div className="about-stat">
-              <span className="stat-num">25+</span>
+              <span className="stat-num">20+</span>
               <span className="stat-label">Years Experience</span>
             </div>
             <div className="about-stat">
@@ -68,22 +68,22 @@ export default function About() {
         </div>
       </section>
 
-      {/* ===== JOURNEY / TIMELINE ===== */}
+     
       <section className="about-journey">
         <div className="about-section">
           <div className="about-section-label">
             <div className="about-eyebrow">Our Journey</div>
-            <h2>Milestones that <span className="highlight">Define us</span></h2>
+            <h2>Saliant <span className="highlight">Features</span></h2>
           </div>
 
           <div className="about-timeline">
             <div className="tl-item left">
               <div className="tl-card">
-                <h3>🏢 Founded in 1999</h3>
-                <p>Started with a small team of 5 in a garage, with a vision to revolutionize digital solutions.</p>
+                <h3>HEC Recognized Degree Programs</h3>
+                <p> Degree programs approved and accredited by the Higher Education Commission (HEC) of Pakistan.</p>
               </div>
               <div className="tl-center">
-                <span className="tl-year">1999</span>
+                <span className="tl-year"></span>
               </div>
               <div className="tl-empty"></div>
             </div>
@@ -91,21 +91,21 @@ export default function About() {
             <div className="tl-item right">
               <div className="tl-empty"></div>
               <div className="tl-center">
-                <span className="tl-year">2005</span>
+                <span className="tl-year"></span>
               </div>
               <div className="tl-card">
-                <h3>🌍 Global Expansion</h3>
-                <p>Opened our first international office and expanded our client base to 10+ countries.</p>
+                <h3>Outcome-Based Education</h3>
+                <p> A teaching approach focused on achieving specific learning outcomes and practical skills.</p>
               </div>
             </div>
 
             <div className="tl-item left">
               <div className="tl-card">
-                <h3>🚀 1,000th Client</h3>
-                <p>Reached a major milestone by onboarding our 1,000th client, cementing our industry reputation.</p>
+                <h3>Industry-Aligned Curriculum</h3>
+                <p>A curriculum designed to meet current industry needs and job market requirements.</p>
               </div>
               <div className="tl-center">
-                <span className="tl-year">2010</span>
+                <span className="tl-year"></span>
               </div>
               <div className="tl-empty"></div>
             </div>
@@ -113,21 +113,69 @@ export default function About() {
             <div className="tl-item right">
               <div className="tl-empty"></div>
               <div className="tl-center">
-                <span className="tl-year">2015</span>
+                <span className="tl-year"></span>
               </div>
               <div className="tl-card">
-                <h3>💡 AI Innovation Hub</h3>
-                <p>Launched our dedicated AI research division to pioneer next‑generation solutions.</p>
+                <h3>AI & Emerging Technologies Integration</h3>
+                <p> Incorporating Artificial Intelligence and new technologies into teaching and learning.</p>
               </div>
             </div>
 
             <div className="tl-item left">
               <div className="tl-card">
-                <h3>🏆 2,500+ Teams</h3>
-                <p>Today, we proudly serve over 2,500 teams across 50+ countries, delivering excellence.</p>
+                <h3>Modern Computer & Science Laboratories</h3>
+                <p> Well-equipped labs that support practical learning in computing and science.</p>
               </div>
               <div className="tl-center">
-                <span className="tl-year">2024</span>
+                <span className="tl-year"></span>
+              </div>
+              <div className="tl-empty"></div>
+            </div>
+
+            {/* New Salient Feature Card 1 - Right */}
+            <div className="tl-item right">
+              <div className="tl-empty"></div>
+              <div className="tl-center">
+                <span className="tl-year"></span>
+              </div>
+              <div className="tl-card">
+                <h3>Robotics, Automation & IoT Labs</h3>
+                <p>Specialized labs for learning robotics, automation, and Internet of Things (IoT) technologies.</p>
+              </div>
+            </div>
+
+            
+            <div className="tl-item left">
+              <div className="tl-card">
+                <h3>Career Development Assistance</h3>
+                <p> Services that help students prepare for careers through training and job support.</p>
+              </div>
+              <div className="tl-center">
+                <span className="tl-year"></span>
+              </div>
+              <div className="tl-empty"></div>
+            </div>
+
+           
+            <div className="tl-item right">
+              <div className="tl-empty"></div>
+              <div className="tl-center">
+                <span className="tl-year"></span>
+              </div>
+              <div className="tl-card">
+                <h3>Business & Leadership Development Programs</h3>
+                <p> Programs that build management, leadership, and entrepreneurial skills.</p>
+              </div>
+            </div>
+
+           
+            <div className="tl-item left">
+              <div className="tl-card">
+                <h3> Alumni Networking & Mentorship Programs</h3>
+                <p> Opportunities to connect with graduates for career guidance and professional networking.</p>
+              </div>
+              <div className="tl-center">
+                <span className="tl-year"></span>
               </div>
               <div className="tl-empty"></div>
             </div>
@@ -135,7 +183,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ===== LEADERSHIP ===== */}
+       
       <section className="about-leadership">
         <div className="about-section-label">
           <div className="about-eyebrow">Leadership</div>
@@ -145,7 +193,7 @@ export default function About() {
         <div className="leaders-grid">
           <div className="leader-card">
             <img
-              src=""
+              src="/images/leaders/director-image.jpeg"
               alt="Director img"
               className="leader-banner"
             />
@@ -166,7 +214,7 @@ export default function About() {
 
           <div className="leader-card">
             <img
-              src=""
+              src="/images/leaders/principal-image.jpeg"
               alt="Principal img"
               className="leader-banner"
             />
@@ -187,7 +235,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ===== VALUES ===== */}
+       
       <section className="about-values">
         <h2>Our <span className="highlight">Core Values</span></h2>
         <p className="values-subtitle">

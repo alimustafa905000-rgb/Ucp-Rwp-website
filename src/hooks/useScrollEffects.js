@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-// ===== 1️⃣ SCROLL EFFECTS =====
 export function useScrollEffects() {
   const [progress, setProgress] = useState(0);
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +22,7 @@ export function useScrollEffects() {
   return { progress, scrolled, showBackToTop };
 }
 
-// ===== 2️⃣ REVEAL ANIMATIONS (fixed) =====
+
 export function useReveal(deps = []) {
   useEffect(() => {
     const els = document.querySelectorAll(
@@ -49,7 +48,7 @@ export function useReveal(deps = []) {
 
     els.forEach((el) => obs.observe(el));
 
-    // Safety fallback – reveal any still-hidden elements after 1.5s
+    
     const timer = setTimeout(() => {
       document.querySelectorAll(
         '.reveal:not(.visible), .reveal-left:not(.visible), .reveal-right:not(.visible), .reveal-up:not(.visible)'
@@ -63,7 +62,6 @@ export function useReveal(deps = []) {
   }, deps);
 }
 
-// ===== 3️⃣ COUNTER (legacy) =====
 export function useCounters(deps = []) {
   useEffect(() => {
     function animateCount(el) {
@@ -95,7 +93,7 @@ export function useCounters(deps = []) {
   }, deps);
 }
 
-// ===== 4️⃣ DATA-COUNT COUNTER (more robust) =====
+
 export function useDataCountCounters(deps = []) {
   useEffect(() => {
     function animateCounter(element) {

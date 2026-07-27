@@ -95,7 +95,7 @@ export default function CampusInfo() {
 
   return (
     <>
-      {/* ===== HERO ===== */}
+     
       <section className="hero">
         <div className="hero-inner">
           <div className="eyebrow"><i className="fas fa-university"></i> Campus Info</div>
@@ -112,7 +112,7 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* ===== STAT HIGHLIGHTS ===== */}
+     
       <section className="section" style={{ paddingTop: '20px' }}>
         <div className="grid-6 stagger-grid">
           {STAT_HIGHLIGHTS.map((s, idx) => (
@@ -125,7 +125,7 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* ===== CONSTITUENT COLLEGE + ADMISSION POLICY ===== */}
+     
       <section className="section">
         <div className="grid-2">
           <div className="card">
@@ -164,7 +164,7 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* ===== DEGREE PROGRAMS ===== */}
+     
       <section className="section accent-bg">
         <div className="section-label">
           <div className="eyebrow"><i className="fas fa-book-open"></i> Programs</div>
@@ -196,7 +196,7 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* ===== FEE STRUCTURE ===== */}
+     
       <section className="section">
         <div className="section-label">
           <div className="eyebrow"><i className="fas fa-coins"></i> Fee Structure</div>
@@ -207,7 +207,7 @@ export default function CampusInfo() {
         <FeeTable title="Post-ADP Programs" icon="fa-arrow-right" color="var(--gold)" rows={POST_ADP_FEES} />
       </section>
 
-      {/* ===== SCHOLARSHIPS ===== */}
+       
       <section className="section accent-bg">
         <div className="section-label">
           <div className="eyebrow"><i className="fas fa-hand-holding-usd"></i> Financial Support</div>
@@ -261,7 +261,7 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* ===== KEY FEATURES ===== */}
+       
       <section className="section">
         <div className="section-label">
           <div className="eyebrow"><i className="fas fa-star"></i> Why UCP</div>
@@ -274,7 +274,7 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* ===== CLUBS & SOCIETIES ===== */}
+      
       <section className="section accent-bg">
         <div className="section-label">
           <div className="eyebrow"><i className="fas fa-users"></i> Community</div>
@@ -292,7 +292,7 @@ export default function CampusInfo() {
         </div>
       </section>
 
-      {/* ===== CAMPUSES ===== */}
+      
       <section className="section">
         <div className="section-label">
           <div className="eyebrow"><i className="fas fa-map-pin"></i> Visit Us</div>

@@ -25,7 +25,7 @@ export default function Societies() {
   const [selectedId, setSelectedId] = useState(null);
   useReveal([selectedId]);
 
-  // ----- Load & Merge Data -----
+  
   useEffect(() => {
     const loadData = () => {
       try {
@@ -70,7 +70,7 @@ export default function Societies() {
           });
         }
 
-        // 4. Merge: admin data overrides static data by `id`
+        
         const adminMap = {};
         adminData.forEach((item) => {
           if (item.id) {
@@ -116,7 +116,7 @@ export default function Societies() {
     return () => window.removeEventListener('storage', handleStorage);
   }, [societyKey]);
 
-  // ----- Detail view state -----
+ 
   const selected = allSocieties.find((s) => s.id === selectedId);
 
   function openDetail(id) {
@@ -129,7 +129,7 @@ export default function Societies() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // ----- Loading & Error states -----
+   
   if (loading) {
     return (
       <div className={styles.container}>
@@ -167,12 +167,12 @@ export default function Societies() {
     );
   }
 
-  // ----- Render main view -----
+  
   return (
     <>
       {!selected ? (
         <>
-          {/* HERO */}
+          
           <section className={styles.hero}>
             <div className={styles['hero-inner']}>
               <div className={styles.eyebrow}>
@@ -183,13 +183,12 @@ export default function Societies() {
                 <span className={styles['gradient-text']}>Societies</span>
               </h1>
               <p className={styles['hero-desc']}>
-                Discover the diverse range of societies at our university.
-                Join a community that shares your passion.
+                Clubs and societies play a significant role in BS and ADP programs, offering students a range of benefits. The societies provide opportunities for students to network with peers, industry professionals, and alumni. The participation in clubs and societies can help students develop confidence, self-awareness, and emotional intelligence. Some clubs and societies offer career-related benefits, such as mentorship, internships, and job opportunities. The following clubs and societies have been established in UCP Rawalpindi campus.
               </p>
             </div>
           </section>
 
-          {/* GRID */}
+          
           <section className={styles.section}>
             <div className={`${styles['section-label']} reveal reveal-up`}>
               <div className={styles.eyebrow}>
@@ -248,7 +247,7 @@ export default function Societies() {
           </section>
         </>
       ) : (
-        /* ================== DETAIL VIEW (overlay) ================== */
+    
         <div
           className={`${styles['detail-view']} ${styles.active}`}
           style={{
@@ -262,8 +261,8 @@ export default function Societies() {
             zIndex: 9999,
             padding: '20px 40px 60px',
           }}
-        >
-          {/* Back button */}
+        > 
+
           <button
             onClick={closeDetail}
             style={{
@@ -298,9 +297,9 @@ export default function Societies() {
           </button>
 
           <div style={{ marginTop: '70px' }}>
-            {/* Header */}
+            
             <div className={styles['detail-header']}>
-              {/* --- UPDATED LOGO CONTAINER --- */}
+              
               <div
                 className={styles['detail-icon']}
                 style={{
@@ -332,7 +331,7 @@ export default function Societies() {
                   ></i>
                 )}
               </div>
-              {/* --------------------------------- */}
+             
 
               <div className={styles['detail-header-info']}>
                 <h1>{selected.name}</h1>
@@ -341,7 +340,7 @@ export default function Societies() {
               </div>
             </div>
 
-            {/* Description */}
+          
             <div className={styles['detail-description']}>{selected.description}</div>
 
             {/* Mission */}
@@ -352,7 +351,7 @@ export default function Societies() {
               </div>
             )}
 
-            {/* Objectives */}
+           
             {selected.objectives && selected.objectives.length > 0 && (
               <div className={styles['detail-objectives']}>
                 <h2>Objectives</h2>
@@ -364,7 +363,7 @@ export default function Societies() {
               </div>
             )}
 
-            {/* Activities */}
+          
             {selected.activities && selected.activities.length > 0 && (
               <div className={styles['detail-activities']}>
                 <h2>Activities</h2>
@@ -376,15 +375,14 @@ export default function Societies() {
               </div>
             )}
 
-            {/* Vision */}
+          
             {selected.vision && (
               <div className={styles['detail-vision']}>
                 <h2>Vision</h2>
                 <p>{selected.vision}</p>
               </div>
             )}
-
-            {/* Contact */}
+ 
             {selected.contact && (
               <div className={styles['detail-contact']}>
                 <h2>Contact Information</h2>
@@ -406,7 +404,7 @@ export default function Societies() {
               </div>
             )}
 
-            {/* Motto */}
+           
             {selected.motto && (
               <div className={styles['detail-motto']}>
                 <h2>Club Motto</h2>
@@ -414,7 +412,7 @@ export default function Societies() {
               </div>
             )}
 
-            {/* Team section */}
+            
             {selected.team && selected.team.length > 0 && (
               <div className={styles['team-section']}>
                 <div className={styles['team-heading-wrapper']}>

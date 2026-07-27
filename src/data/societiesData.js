@@ -145,7 +145,7 @@ export const societiesData = [
     "name": "Dramatic Club",
     "tagline": "\"Bringing Stories to Life Through Performance.\"",
     "tag": "Performing Arts",
-    "logo": "/images/team/d-club.jpeg", // ✅ Added logo path
+    "logo": "/images/team/d-club.jpeg", 
     "description": "The Dramatic Club provides students with a platform to showcase their creativity, acting skills, and passion for performing arts. The club organizes theatrical performances, stage plays, cultural events, and workshops to promote artistic expression and teamwork.",
     "mission": "To encourage creativity and self-expression through drama, theater, and performing arts while fostering confidence and collaboration among students.",
     "objectives": [
@@ -261,7 +261,7 @@ export const societiesData = [
     "icon": "fa-hand-holding-heart",
     "tagline": "\"Together for a Better Community.\"",
     "tag": "Social Impact",
-    "logo": "/images/team/csr.png", // ✅ Added logo path (optional – you mentioned CSR)
+    "logo": "/images/team/csr.png", 
     "description": "The CSR (Corporate Social Responsibility) Club aims to develop social responsibility and community engagement among students. The club organizes welfare projects, awareness campaigns, and volunteer activities to create a positive impact on society.",
     "mission": "To empower students to contribute to society through volunteer work, community service, and social initiatives.",
     "objectives": [
@@ -316,30 +316,31 @@ export const societiesData = [
   {
     "id": "literary",
     "name": "Literary Society",
-    "tagline": "\"Words That Inspire Minds.\"",
+    "tagline": "\"Words That Inspire Minds That lead.\"",
     "tag": "Literature & Arts",
-    "logo": "/images/team/l-club.jpeg", // ✅ Added logo path
+    "logo": "/images/team/l-club.jpeg", 
     "description": "The Literary Society encourages students to express their ideas and creativity through literature, writing, and public speaking. The society organizes debates, poetry sessions, and literary events to promote intellectual growth.",
-    "mission": "To foster creativity, critical thinking, and communication skills through literary activities.",
+    "mission": "To foster a culture of critical thinking, creativity, and eloquence at UCP by celebrating literature in all its forms. We aim to provide a platform where students can explore, express, and engage with literary ideas that inspire intellectual growth and social awareness",
     "objectives": [
-      "Promote reading and writing culture.",
-      "Organize debates and poetry competitions.",
-      "Encourage public speaking and creative expression.",
-      "Develop communication skills.",
-      "Support literary talent among students."
+      "Promote Reading & Writing: Encourage students to read diverse genres and develop original writing skills.",
+      "Develop Communication Skills: Enhance public speaking, debating, and creative expression through literary activities. .",
+      "Appreciate Literature: Introduce students to classical, contemporary, Pakistani, and world literature.",
+      "Cultural Exchange: Provide a forum for dialogue on language, literature, and culture.",
+      "Talent Recognition: Identify and showcase literary talent within the UCP community."
     ],
     "activities": [
-      "Poetry and storytelling sessions.",
-      "Debate competitions.",
-      "Essay and article writing contests.",
+      "Literary Events",
+      "Academic Forums.",
+      "Workshops",
       "Book discussions and literary workshops.",
-      "Public speaking events."
+      "Competitions.",
+      "Flagship Projects"
     ],
     "vision": "To build a vibrant community of writers, speakers, and thinkers.",
     "contact": {
       "phone": "+92 300 1234567"
     },
-    "motto": "\"Words That Inspire Minds.\""
+    "motto": "\"Words That Inspire Minds That Lead.\""
   },
   {
     "id": "scientific",
@@ -402,7 +403,7 @@ export const societiesData = [
   {
     "id": "academic",
     "name": "Academic Community",
-    "icon": "fa-graduation-cap", // ✅ Fixed – was incorrectly set to an image path
+    "icon": "fa-graduation-cap",
     "tagline": "\"Learning, Growing, Succeeding.\"",
     "tag": "Academics",
     "logo": null,

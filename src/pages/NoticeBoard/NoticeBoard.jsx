@@ -43,7 +43,7 @@ const EVENTS = [
 ];
 
 export default function NoticeBoard() {
-  useReveal(); // triggers scroll animations
+  useReveal(); 
 
   return (
     <>

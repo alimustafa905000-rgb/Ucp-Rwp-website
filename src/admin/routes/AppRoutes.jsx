@@ -1,11 +1,11 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAdminAuth } from "../admin/context/AdminAuthContext";
 
-import Layout from "../components/Layout"; // your existing public layout
+import Layout from "../components/Layout"; 
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
-// import the rest of your public pages...
+ 
 
 import AdminLogin from "../admin/pages/AdminLogin";
 import AdminShell from "../admin/components/AdminShell";
@@ -28,7 +28,7 @@ function Protected({ children }) {
 export default function AppRoutes() {
   return (
     <Routes>
-      {/* PUBLIC WEBSITE */}
+      
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -36,7 +36,7 @@ export default function AppRoutes() {
         {/* add other existing routes */}
       </Route>
 
-      {/* ADMIN */}
+      
       <Route path="/admin/login" element={<AdminLogin />} />
 
       <Route

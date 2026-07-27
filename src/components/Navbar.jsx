@@ -39,7 +39,7 @@ export default function Navbar({ scrolled }) {
         <div className="nav-inner">
           <div className="nav-left">
             <NavLink to="/Home.jsx" className="logo-link">
-              {/* Add your first logo file at: public/images/logo1.jpeg */}
+              
               <img
                 src="/images/team/logo-1.png"
                 alt="UCP Logo"
@@ -53,7 +53,7 @@ export default function Navbar({ scrolled }) {
             </NavLink>
             <div className="nav-divider" />
             <NavLink to="/Home.jsx" className="logo-link">
-              {/* Add your second logo file at: public/images/logo2.jpeg */}
+              
               <img
                 src="/images/team/logo-2.jpeg"
                 alt="Punjab College Logo"
