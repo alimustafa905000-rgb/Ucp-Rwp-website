@@ -1,7 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAdminAuth } from "./admin/context/AdminAuthContext";
-
-// Public layout/pages
 import Layout from "./components/Layout";
 
 import Home from "./pages/Home/Home";
@@ -13,7 +11,7 @@ import NoticeBoard from "./pages/NoticeBoard/NoticeBoard";
 import EMagazine from "./pages/EMagazine/EMagazine";
 import Projects from "./pages/Projects/Projects";
 
-// Admin pages
+
 import AdminLogin from "./admin/pages/AdminLogin";
 import AdminShell from "./admin/components/AdminShell";
 import Dashboard from "./admin/pages/Dashboard";
@@ -44,9 +42,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         
-        {/* ✅ Show all societies when visiting /societies */}
+  
         <Route path="/societies" element={<Societies />} />
-        {/* ✅ Show a specific society when visiting /societies/:key */}
+        
         <Route path="/societies/:societyKey" element={<Societies />} />
         
         <Route path="/campus-info" element={<CampusInfo />} />
@@ -79,7 +77,7 @@ export default function App() {
         <Route path="societies/:societyKey" element={<SocietyManager />} />
       </Route>
 
-      {/* FALLBACK */}
+      
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
