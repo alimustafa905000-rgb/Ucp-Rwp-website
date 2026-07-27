@@ -13,7 +13,7 @@ footer {
   padding-bottom: 48px;
 }
 
-/* ---- NEW: Two logos with divider ---- */
+ 
 .footer-logos {
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@ footer {
 }
 
 .footer-logos img {
-  width: 36px;   /* smaller than navbar (44px) */
+  width: 36px;   
   height: 36px;
   object-fit: contain;
   border-radius: 50%;
@@ -36,8 +36,7 @@ footer {
   flex-shrink: 0;
 }
 
-/* ---- Remove old img rule or keep as fallback ---- */
-/* .footer-brand img { ... }  <-- we no longer use this directly */
+ 
 
 .footer-brand .brand-name {
   font-size: 16px;
@@ -208,7 +207,7 @@ footer {
   color: white;
 }
 
-/* ---- Responsive ---- */
+
 @media (max-width: 900px) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -226,7 +225,7 @@ footer {
     text-align: center;
   }
 
-  /* optional: smaller logos on mobile */
+
   .footer-logos img {
     width: 30px;
     height: 30px;
