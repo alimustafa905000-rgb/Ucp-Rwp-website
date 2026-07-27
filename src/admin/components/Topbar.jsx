@@ -50,7 +50,7 @@ export default function Topbar({ onMenu }) {
               )}
             </div>
 
-            {/* ✅ Only the gradient logout button – no profile dropdown */}
+            
             <button
               onClick={() => logout(false)}
               className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-white
