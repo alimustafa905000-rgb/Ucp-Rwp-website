@@ -39,7 +39,7 @@ export default function CrudPage({
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
 
-  // ================== CRUD LOGIC (UNCHANGED) ==================
+  
   const load = async () => {
     setLoading(true);
     try {
@@ -54,7 +54,7 @@ export default function CrudPage({
 
   useEffect(() => {
     load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [query.page, query.search, query.sortBy, query.sortDir, JSON.stringify(query.filters)]);
 
   const openCreate = () => {
@@ -113,7 +113,7 @@ export default function CrudPage({
     }
   };
 
-  // ================== GLASSMORPHISM STYLES ==================
+  
   const glassCard =
     "rounded-3xl border border-white/10 bg-white/10 backdrop-blur-2xl shadow-2xl";
 
@@ -122,7 +122,7 @@ export default function CrudPage({
 
   return (
     <div className="space-y-6">
-      {/* Header */}
+    
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -150,7 +150,7 @@ export default function CrudPage({
         )}
       </motion.div>
 
-      {/* Toolbar */}
+    
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -205,7 +205,7 @@ export default function CrudPage({
         </div>
       </motion.div>
 
-      {/* Table Card */}
+      
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -289,7 +289,7 @@ export default function CrudPage({
         </div>
       </motion.div>
 
-      {/* Pagination */}
+    
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -303,7 +303,7 @@ export default function CrudPage({
         />
       </motion.div>
 
-      {/* Modal & Confirm Dialog */}
+      
       <Modal
         open={modalOpen}
         title={editing ? `Edit ${title}` : `Add ${title}`}
