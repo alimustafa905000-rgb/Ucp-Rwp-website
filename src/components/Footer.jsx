@@ -7,7 +7,7 @@ export default function Footer() {
     <footer>
       <div className="footer-inner">
         <div className="footer-brand">
-          {/* Two logos with divider */}
+         
           <div className="footer-logos">
             <img
               src="/images/team/logo-1.png"
