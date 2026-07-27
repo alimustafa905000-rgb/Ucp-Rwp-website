@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import "./styles/global.css";
-// import "./components/glass.css";
+
 
 import App from "./App.jsx";
 
