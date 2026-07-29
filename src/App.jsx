@@ -11,7 +11,6 @@ import NoticeBoard from "./pages/NoticeBoard/NoticeBoard";
 import EMagazine from "./pages/EMagazine/EMagazine";
 import Projects from "./pages/Projects/Projects";
 
-
 import AdminLogin from "./admin/pages/AdminLogin";
 import AdminShell from "./admin/components/AdminShell";
 import Dashboard from "./admin/pages/Dashboard";
@@ -23,6 +22,7 @@ import AdminProjects from "./admin/pages/Projects";
 import AdminCampusInfo from "./admin/pages/CampusInfo";
 import ContactMessages from "./admin/pages/ContactMessages";
 import SocietyManager from "./admin/pages/SocietyManager";
+import AdminSettings from "./admin/components/AdminSettings"; // ✅ correct import
 
 function Protected({ children }) {
   const { isAuthed, loading } = useAdminAuth();
@@ -41,12 +41,8 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        
-  
         <Route path="/societies" element={<Societies />} />
-        
         <Route path="/societies/:societyKey" element={<Societies />} />
-        
         <Route path="/campus-info" element={<CampusInfo />} />
         <Route path="/notice-board" element={<NoticeBoard />} />
         <Route path="/e-magazine" element={<EMagazine />} />
@@ -54,10 +50,10 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Route>
 
-  
+      {/* ADMIN LOGIN */}
       <Route path="/admin/login" element={<AdminLogin />} />
 
-      
+      {/* PROTECTED ADMIN ROUTES (with sidebar) */}
       <Route
         path="/admin"
         element={
@@ -75,9 +71,10 @@ export default function App() {
         <Route path="campus-info" element={<AdminCampusInfo />} />
         <Route path="contact-messages" element={<ContactMessages />} />
         <Route path="societies/:societyKey" element={<SocietyManager />} />
+        <Route path="settings" element={<AdminSettings />} /> {/* ✅ ADD THIS LINE */}
       </Route>
 
-      
+      {/* FALLBACK */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
