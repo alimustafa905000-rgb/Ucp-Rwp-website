@@ -74,7 +74,7 @@ export default function AdminSettings() {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Current Password */}
+      
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
               Current Password
@@ -99,7 +99,7 @@ export default function AdminSettings() {
             </div>
           </div>
 
-          {/* New Password */}
+          
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
               New Password
@@ -124,7 +124,7 @@ export default function AdminSettings() {
             </div>
           </div>
 
-          {/* Confirm Password */}
+        
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
               Confirm New Password
@@ -142,7 +142,7 @@ export default function AdminSettings() {
             </div>
           </div>
 
-          {/* Submit Button */}
+          
           <button
             type="submit"
             disabled={loading}
@@ -165,7 +165,7 @@ export default function AdminSettings() {
           </button>
         </form>
 
-        {/* Back Link */}
+        
         <div className="mt-8 text-center">
           <button
             onClick={() => navigate("/admin")}
