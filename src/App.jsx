@@ -37,7 +37,7 @@ function Protected({ children }) {
 export default function App() {
   return (
     <Routes>
-      {/* PUBLIC WEBSITE ROUTES */}
+       
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -53,7 +53,7 @@ export default function App() {
       {/* ADMIN LOGIN */}
       <Route path="/admin/login" element={<AdminLogin />} />
 
-      {/* PROTECTED ADMIN ROUTES (with sidebar) */}
+      
       <Route
         path="/admin"
         element={
@@ -62,7 +62,7 @@ export default function App() {
           </Protected>
         }
       >
-        <Route index element={<Dashboard />} />
+        <Route index element={<Dashboard />} />      this is new route for dashnoard 
         <Route path="home" element={<HomeEditor />} />
         <Route path="about" element={<AboutEditor />} />
         <Route path="notices" element={<Notices />} />
@@ -71,10 +71,10 @@ export default function App() {
         <Route path="campus-info" element={<AdminCampusInfo />} />
         <Route path="contact-messages" element={<ContactMessages />} />
         <Route path="societies/:societyKey" element={<SocietyManager />} />
-        <Route path="settings" element={<AdminSettings />} /> {/* ✅ ADD THIS LINE */}
+        <Route path="settings" element={<AdminSettings />} /> 
       </Route>
 
-      {/* FALLBACK */}
+      
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
