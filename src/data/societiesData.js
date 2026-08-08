@@ -2,35 +2,49 @@ export const societiesData = [
   {
     "id": "devforge",
     "name": "DevForge Society",
-    "tagline": "\"Code, Create, Innovate.\"",
+    "tagline": "\" Connect | Code | Create \"",
     "tag": "Tech Club",
     "logo": "/images/team/dev-logo.jpeg", 
-    "description": "The DevForge Society is a technology-driven community that empowers students to explore software development, web technologies, and emerging trends in the tech industry. The society organizes coding competitions, workshops, hackathons, and collaborative projects to enhance students' technical and problem-solving skills.",
-    "mission": "To inspire innovation and equip students with practical skills in software development, programming, and modern technologies.",
+    "description": "DevForge is the official technology and innovation society of the PGC | UCP, dedicated to empowering students with practical technical skills, industry exposure and a culture of innovation. The society serves as a collaborative platform where aspiring developers, designers, engineers and technology enthusiasts come together to learn, build and lead. Through workshops, competitions, real world projects and professional networking, DevForge prepares students to become future leaders in the rapidly evolving digital world.",
+    "mission": "To empower students with practical knowledge, technical expertise and leadership opportunities by fostering innovation, collaboration and continuous learning in emerging technologies while bridging the gap between academic learning and industry demands.",
     "objectives": [
-      "Promote programming and software development skills.",
-      "Organize coding competitions and hackathons.",
-      "Encourage teamwork and innovation.",
-      "Provide hands-on experience through projects.",
-      "Introduce students to emerging technologies."
+      " Promote technical excellence through practical learning.",
+      " Develop students' problem solving and critical thinking abilities.",
+      " Organize workshops, seminars and hands on training sessions.",
+      " Encourage innovation through hackathons and competitions.",
+      "Foster collaboration among students from diverse disciplines.",
+      "Connect students with industry experts and technology leaders",
+      "Support research, entrepreneurship and startup initiatives",
+      "Prepare students for successful careers in the technology industry"
     ],
     "activities": [
-      "Web and mobile development workshops.",
-      "Coding competitions and hackathons.",
-      "Programming bootcamps and seminars.",
-      "Open-source and collaborative projects.",
-      "Guest sessions with industry professionals."
+      " Programming and software development workshops.",
+      " Artificial Intelligence and Machine Learning sessions.",
+      " Cybersecurity awareness and ethical hacking events.",
+      "UI and UX design bootcamps.",
+      "Web and mobile application development training.",
+      "Cloud computing and Devops workshops ",
+      "Data Science and analytics sessions",
+      "Robotics and Internet of Things projects",
+      "National and international hackathons ",
+      "Coding competitions ",
+      "Tech talks by industry professionals ",
+      "Startup and entrepreneurship programs ",
+      "Open source contribution initiatives ",
+      "Career development, CV building and interview preparation",
+      "Community outreach and technology awareness campaigns ",
+      ""
     ],
-    "vision": "To build a community of creative developers and future technology leaders.",
+    "vision": "To become the leading student technology society recognised for developing innovative thinkers, skilled professionals and future entrepreneurs who contribute to the advancement of technology and society on a global scale",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "saira.m.hussain@gmail.com"
     },
-    "motto": "\"Code, Create, Innovate.\"",
+    "motto": "\" Connect | Code | Create \"",
     "team": [
       {
         "name": "Saira Mazhar",
         "designation": "Society Head",
-        "skills": ["Lecturer in Computer Science","Academic Reasearcher","Enterprise Software Engineering/Alghorithms Expert","python/java/c#/C++/VB.net"],
+        "skills": ["Lecturer in Computer Science","Academic Reasearcher","Enterprise Software Engineering/Alghorithms Expert","python/java/c#/C++/Dotnet frameworks"],
         "linkedin": "#",
         "github": "#",
         "image": "/images/team/mam-img.jpeg"
@@ -61,17 +75,18 @@ export const societiesData = [
       },
       {
         "name": "Ali Mustafa",
-        "designation": "React Developer",
+        "designation": "Frontend Lead",
         "skills": ["Html", "Css", "Javascript","Tailwindcss","Bootstrap","React","Python","c++","Sql","MangoDb",],
-        "linkedin": "#",
-        "github": "#",
-        "image": "/images/team/ali-imge.jpeg"
+        "linkedin": "https://www.linkedin.com/in/ali-mustafa-9a5414361/",
+        "github": "https://github.com/alimustafa905000-rgb",
+        "image": "/images/team/ali-img.jpeg"
       },
       {
         "name": "Laraib Rashid",
         "designation": "E-Maagazine Editor",
         "skills": ["Development", "Seo", "Content Writer","Article Writer","Designer"],
-        
+          "linkedin": "#",
+        "github": "#",
         "image": "/images/team/laraib.jpeg"
       },
       {
@@ -134,39 +149,43 @@ export const societiesData = [
     ],
     "vision": "To create a vibrant and connected alumni network that contributes to the personal and professional growth of students and graduates.",
     "contact": {
-      "email": "alumni@university.edu",
-      "phone": "+92 300 1234567",
-      "office": "Student Affairs Department"
+      "email": "Principal.rawalpindi@ucp.edu.pk",
+  
     },
     "motto": "\"Connecting Generations, Inspiring Success.\""
   },
   {
     "id": "dramatic",
     "name": "Dramatic Club",
-    "tagline": "\"Bringing Stories to Life Through Performance.\"",
+    "tagline": "\"Driven by Passion United by Purpose\"",
     "tag": "Performing Arts",
     "logo": "/images/team/d-club.jpeg", 
-    "description": "The Dramatic Club provides students with a platform to showcase their creativity, acting skills, and passion for performing arts. The club organizes theatrical performances, stage plays, cultural events, and workshops to promote artistic expression and teamwork.",
-    "mission": "To encourage creativity and self-expression through drama, theater, and performing arts while fostering confidence and collaboration among students.",
+    "description": "The UCP Dramatic Club is the official event management and performing arts society dedicated to creating memorable experiences across the University of Central Punjab and Punjab Group of Colleges. More than a dramatic society, it serves as the central platform for planning, organising and managing cultural events, official ceremonies, competitions, festivals, orientations and student engagements. Through teamwork, creativity and professionalism, the club empowers students to transform ideas into impactful experiences while strengthening campus life.",
+    "mission": "To inspire creativity, leadership and collaboration by delivering professionally managed events and meaningful experiences that unite the university community while providing students with practical opportunities to develop organisational, communication and management skills.",
     "objectives": [
-      "Promote talent in acting and stage performance.",
-      "Organize plays, skits, and cultural events.",
-      "Develop communication and presentation skills.",
-      "Encourage teamwork and leadership.",
-      "Provide opportunities for artistic growth."
+      "Organise and manage official university events with excellence.",
+      "Promote creativity, confidence and teamwork among students.",
+      "Develop leadership, event planning and management skills.",
+      "Provide opportunities in stage management, production and coordination.",
+      "Encourage student participation in cultural, academic and social activities."
     ],
     "activities": [
-      "Stage dramas and theatrical performances.",
-      "Acting and scriptwriting workshops.",
-      "Cultural festivals and competitions.",
-      "Talent shows and auditions.",
-      "Interactive sessions with artists."
+      "University orientations and welcome ceremonies.",
+      "Cultural festivals and annual galas.",
+      "Stage plays and theatrical performances.",
+      "Talent shows and competitions.",
+      "Award ceremonies and appreciation events.",
+      "National celebrations and awareness campaigns.",
+      "Guest speaker sessions and university gatherings.",
+      "Event planning, logistics and backstage management.",
+      "Volunteer training and leadership development",
+      "Student engagement and entertainment programmes"
     ],
-    "vision": "To build a vibrant community of creative individuals who inspire and entertain through the art of drama.",
+    "vision": "To become the leading student event management and performing arts society, recognised for excellence, innovation and professionalism in creating unforgettable experiences that enrich university life and develop tomorrow's leaders.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "+92 300 1234567"
     },
-    "motto": "\"Bringing Stories to Life Through Performance.\""
+    "motto": "\"Driven by Passion United by Purpose\""
   },
   {
     "id": "blood-donors",
@@ -193,7 +212,7 @@ export const societiesData = [
     ],
     "vision": "To create a compassionate and socially responsible community committed to saving lives through blood donation.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "+92 300 1234567"
     },
     "motto": "\"Donate Blood, Save Lives.\""
   },
@@ -222,7 +241,7 @@ export const societiesData = [
     ],
     "vision": "To create a community of energetic and adventurous students who value fitness and teamwork.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "Principal.rawalpindi@ucp.edu.pk"
     },
     "motto": "\"Explore, Compete, and Conquer.\""
   },
@@ -251,7 +270,7 @@ export const societiesData = [
     ],
     "vision": "To establish a vibrant gaming community that inspires creativity and healthy competition.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "Principal.rawalpindi@ucp.edu.pk"
     },
     "motto": "\"Play, Compete, and Win.\""
   },
@@ -259,30 +278,31 @@ export const societiesData = [
     "id": "csr",
     "name": "CSR Club",
     "icon": "fa-hand-holding-heart",
-    "tagline": "\"Together for a Better Community.\"",
+    "tagline": "\"Together for a Better Tomorrow.\"",
     "tag": "Social Impact",
     "logo": "/images/team/csr.png", 
-    "description": "The CSR (Corporate Social Responsibility) Club aims to develop social responsibility and community engagement among students. The club organizes welfare projects, awareness campaigns, and volunteer activities to create a positive impact on society.",
-    "mission": "To empower students to contribute to society through volunteer work, community service, and social initiatives.",
+    "description": " The Corporate Social Responsibility (CSR) Society is a student-led platform committed to promoting social responsibility, ethical values, environmental sustainability, and community engagement. The society encourages students to become responsible citizens by participating in activities that create a positive impact on society.",
+    "mission": "To inspire students to contribute to society through ethical leadership, volunteerism, environmental awareness, and community service while promoting sustainable development..",
     "objectives": [
-      "Promote social responsibility and leadership.",
-      "Organize welfare and community service projects.",
-      "Encourage volunteerism among students.",
-      "Raise awareness about social issues.",
-      "Support sustainable development initiatives."
+      "Promote awareness of corporate social responsibility and sustainability.",
+      "Encourage students to participate in community welfare and social service activities.",
+      "Develop leadership, teamwork, and communication skills through volunteer initiatives.",
+      "Organize educational events that address social, environmental, and humanitarian issues.",
+      "Build partnerships that support positive social change."
     ],
     "activities": [
-      "Charity and fundraising campaigns.",
-      "Community service projects.",
-      "Awareness seminars and workshops.",
-      "Environmental and social initiatives.",
-      "Volunteer programs."
+      "6th September – Solidarity with Armed Forces.",
+      "Event World Sustainable Transport Day.",
+      "International Mountain Day.",
+      "Mother's Day Celebration.",
+      "Seminar on Cancer Awareness.",
+      "Community service campaigns, awareness drives, and volunteer activities."
     ],
-    "vision": "To build socially responsible leaders who actively contribute to the betterment of society.",
+    "vision": "To become a leading student society that empowers future leaders to make ethical decisions, promote sustainable development, and create a lasting positive impact on society.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "ammaraijaz03@gmail.com"
     },
-    "motto": "\"Together for a Better Community.\""
+    "motto": "\"Together for a Better tomorrow.\""
   },
   {
     "id": "robotics",
@@ -309,7 +329,7 @@ export const societiesData = [
     ],
     "vision": "To create a community of innovative thinkers and future engineers.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "phone": "Principal.rawalpindi@ucp.edu.pk7"
     },
     "motto": "\"Innovating the Future Through Technology.\""
   },
@@ -367,7 +387,7 @@ export const societiesData = [
     ],
     "vision": "To create a culture of scientific excellence and innovation.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "Principal.rawalpindi@ucp.edu.pk"
     },
     "motto": "\"Exploring Science, Inspiring Innovation.\""
   },
@@ -396,7 +416,7 @@ export const societiesData = [
     ],
     "vision": "To become a leading platform for research and academic development.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "Principal.rawalpindi@ucp.edu.pk"
     },
     "motto": "\"Research Today, Innovate Tomorrow.\""
   },
@@ -425,7 +445,7 @@ export const societiesData = [
     ],
     "vision": "To build a strong academic community committed to knowledge and excellence.",
     "contact": {
-      "phone": "+92 300 1234567"
+      "email": "Principal.rawalpindi@ucp.edu.pk"
     },
     "motto": "\"Learning, Growing, Succeeding.\""
   }
